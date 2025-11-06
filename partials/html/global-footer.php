@@ -1,108 +1,68 @@
-<footer class="section footer-section">
-	<div class="chat-container">
-		<div class="chatbox-icon">
-			<a href="#">
-				<img src='<?php echo $cdn_url; ?>/media/icons/sparkles-white.svg'>
-			</a>
-		</div>
-		<div class="chat-box">
-			<div class="chatbox-header">
-				<div class="title">
-					<div class="icon"><img src='<?php echo $cdn_url; ?>/media/icons/sparkles-white.svg'></div>
-					<div class="title-text">
-						<h2>ResellHub AI</h2>
-						<p>Your marketplace assistant</p>
-					</div>
-				</div>
-				<div>
-					<a class="chatbox-close" href="#">
-						<img src='<?php echo $cdn_url; ?>/media/icons/cross-white.svg'>
-					</a>
-				</div>
-			</div>
-			<div class="chatbox-body">
-			  <div class="chatbot-message">
-			  	<div class="icon"><img src='<?php echo $cdn_url; ?>/media/icons/sparkles-white.svg'></div>
-			  	<div class="message">
-       			 	<p>Hi! I'm your marketplace assistant. I can help you find items or create amazing listings. What would you like to do today?</p>
-       			</div>
-		      </div>
-		      <div class="chat-section">
-		        <div class="chat-section-title">For Buyers</div>
-		        <div class="chat-options">
-		           <button>What's available in electronics?</button>
-		           <button>How do I know if a price is fair?</button>
-		           <button>Tell me about shipping options</button>
-		           <button>Help me find furniture under €200</button>
-		        </div>
-		      </div>
-              <div class="chat-section">
-		        <div class="chat-section-title">For Sellers</div>
-		        <div class="chat-options">
-		           <button>What's available in electronics?</button>
-		           <button>How do I know if a price is fair?</button>
-		           <button>Tell me about shipping options</button>
-		           <button>Help me find furniture under €200</button>
-		        </div>
-		      </div>		  
-			</div>
-			<div class="chatbox-bottom">
-				<input type="text" placeholder="Ask me anything..." />
-      			<button class="reply">➤</button>
-			</div>
-		</div>
-	</div>
-	<div class='row main-row'>
-		<div class="col col-xs-12 col-lg-3 col-a">
-			<h2 aria-lebal='reselhub-logo'>
-				<a href='<?php echo $site_url; ?>'>
-					<img class='logo' src='<?php echo $cdn_url; ?>/media/logo/footer-logo.png'>
-				</a>
-			</h2>
-			<p class="text-white">Ireland's smartest marketplace for buying and selling used items. Powered by AI technology to make your selling experience effortless and profitable.</p>
-			<ul class='social-container'>
-				
-			</ul>
-		</div>
-		<div class="col col-xs-12 col-lg-3 col-b">
-			<h3 class="text-white">Categories</h3>
-			<ul class="text-white">
-				  <li><a href="#">Motors & Vehicles</a></li>
-				  <li><a href="#">Electronics</a></li>
-				  <li><a href="#">Fashion & Clothing</a></li>
-				  <li><a href="#">Home & Garden</a></li>
-				  <li><a href="#">Sports & Leisure</a></li>
-				  <li><a href="#">Property</a></li>
-			</ul>
-		</div>
-		<div class="col col-xs-12 col-lg-3 col-c">
-			<h3 class="text-white">Support</h3>
-			<ul class="text-white">
-			      <li><a href="#">Help Center</a></li>
-				  <li><a href="#">Safety Tips</a></li>
-				  <li><a href="#">AI Features Guide</a></li>
-				  <li><a href="#">For Dealers</a></li>
-				  <li><a href="#">Contact Us</a></li>
-				  <li><a href="#">Feedback</a></li>
-			</ul>
-		</div>
-		<div class="col col-xs-12 col-lg-3 col-d">
-			<h3 class="text-white">Get in Touch</h3>
-			<ul class="contact">
-			      <li><a href="#"><img src='<?php echo $cdn_url; ?>/media/icons/mail-lowwhite.svg'>hello@resellhub.ie</a></li>
-				  <li><a href="#"><img src='<?php echo $cdn_url; ?>/media/icons/phone-lowwhite.svg'>+353 1 234 5678</a></li>
-				  <li><a href="#"><img src='<?php echo $cdn_url; ?>/media/icons/location-lowwhite.svg'>Dublin, Ireland</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class='row  copyright-row'>
-		<div class="col col-xs-12 col-lg-6"><p>©2025 ResellHub.ie. All rights reserved | Designed & Maintained by <a class="taskbucket" href='https://taskbucket.com'>TaskBucket</a></p></div>
-		<div class="col col-xs-12 col-lg-6">
-			<ul class="privacy-container">
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Terms of Service</a></li>
-				<li><a href="#">Terms of Service</a></li>
-			</ul>
-		</div>
-	</div>
+<footer>
+    <div class='section main-footer'>
+        <div class='row'>
+            <div class='col col-xs-12 col-lg-6'>
+                <h2>Yogalife Luxembourg-City</h2>
+                <p>Youth Hostel Luxembourg-City<br>
+                    2, rue du Fort Olisy<br>L- 2261 Luxembourg
+                    <br>+0032 – 468156160
+                    <br>shweta@yogalife.org
+                </p>
+                <p>Account holder: Yogalife<br>
+                    Account number: <span>BE19&nbsp;</span>
+                    <span dir="ltr">7360 3478 8712</span>
+                    <br>BIC/SWIFT code: KREDBEBB
+                    <br>0539.728.784</p>
+                <ul class='social-media'>
+                    <li><a rel="noreferrer nofollow noopener"  target='_blank' href='https://www.facebook.com/people/Yogalifelux/100089231133826/' aria-label="Yogalife facebook"><img src='<@cdn_url>/media/icons/facebook-white.svg' alt=''></a></li>
+                    <li><a rel="noreferrer nofollow noopener" target='_blank' href='https://x.com/YogalifeWorld' aria-label="Yogalife twitter"><img src='<@cdn_url>/media/icons/twitter-white.svg' alt=''></a></li>
+                    <li><a rel="noreferrer nofollow noopener" target='_blank' href='https://www.instagram.com/yogalifelux/' aria-label="Yogalife instagram"><img src='<@cdn_url>/media/icons/instagram-white.svg' alt=''></a></li>
+                    <li><a rel="noreferrer nofollow noopener" target='_blank' href='https://www.youtube.com/user/YogaLifeVideo' aria-label="Yogalife youtube"><img src='<@cdn_url>/media/icons/youtube-white.svg' alt=''></a></li>
+                </ul>
+            </div>
+            <div class='col col-xs-12 col-lg-6'>
+                <h2>Let’s start a conversation</h2>
+                <form class='form' data-endpoint='<@site_url>/taskbucket-api/crm/create-message' data-form-success='Your message has been sent!' data-form-failure='Something went wrong! Please refresh the page and try again.' autocomplete="off">
+                    <input type='hidden' name='form-name' value='Contact Form'>
+                    <div class='row form-row'>
+                        <div class='col col-xs-12 col-sm-6'>
+                            <div class='form-group'>
+                                <label for='contact-fname' class='required-mark'>First Name</label>
+                                <input id='contact-fname' name='first-name' type='text' placeholder='Your first name' required>
+                            </div>
+                        </div>
+                        <div class='col col-xs-12 col-sm-6'>
+                            <div class='form-group'>
+                                <label for='contact-lname' class='required-mark'>Last Name</label>
+                                <input id='contact-lname' name='last-name' type='text' placeholder='Your last name' required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='contact-email' class='required-mark'>Email</label>
+                        <input id='contact-email' name='email' type='email' placeholder='Your email' required>
+                    </div>
+                    <div class='form-group'>
+                        <label for='contact-msg' class='required-mark'>Message</label>
+                        <input id='contact-msg' name='message' type='text' placeholder='Your message' required>
+                    </div>
+                    <div class='form-group'>
+                        <button type='submit' class='btn btn-yellow'>Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class ='bottom-footer'>
+      <div class="col col-xs-12">
+          <ul class="text-center">
+              <li><a href="<@site_url>/terms-and-conditions">Our Terms and Conditions</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class ='copyright-section'>
+      <div class="col col-xs-12">
+          <p class="text-center text-white">Copyright © 2025 - Yogalife Luxembourg | Designed &amp; Maintained by <a rel="noreferrer noopener" href="https://taskbucket.com/">TaskBucket</a></p>
+      </div>
+    </div>
 </footer>

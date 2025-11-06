@@ -1,195 +1,50 @@
-<header>
-	<div class='desktop-menu-container'>
-	 	<div class='row main-header'>
-	 		<div class="col col-xs-6 col-lg-2">
-	 			<div class="logo-container">
-	 				<a href='<?php echo $site_url; ?>'>
-	 						<img src='<?php echo $cdn_url; ?>/media/logo/logo.png'>
-	 				</a>
-	 			</div>
-	 		</div>
-	 		<div class="col col-xs-6 col-lg-10">
-	 			<div class="search-container">
-	 				<input class='search-box' type="text" name="seach-box" placeholder="Search items ...">
-	 				<ul class='header-buttons'>
-	 					<li class="btn btn-white account-btn dropdown">Account
-	 						<ul class="dropdown-container">
-	 							<li><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/user-black.svg'>My Profile</a></li>
-	 							<li><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/sparkles-black.svg'>My listing</a></li>
-	 							<li><img src='<?php echo $cdn_url; ?>/media/icons/logout-black.svg'><a href='#'>Sign Out</a></li>
-	 						</ul>
-	 					</li>
-	 					<li class="btn sell-btn white-color"><a href='#'>Sell items</a></li>
-	 					<li class="message-btn"><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/message-grey.svg'></a></li>
-	 					<li class="notification-btn"><a href=''><img src='<?php echo $cdn_url; ?>/media/icons/notification-grey.svg'></a></li>
-	 				</ul>
-	 			</div>
-	 		</div>
-	 	</div>
-	 	<div class="row bottom-header desktop-menu-row">
-	 		<nav class="menu-list">
-				<ul>
-					<li class="has-mega"><a href='#'>browse</a>
-						<div class="mega-content">
-		           		<div class="mega-row">
-		              		<div class="mega-column">
-				            		<h3>Web Development</h3>
-				            		<a href="#">Frontend</a>
-				            		<a href="#">Backend</a>
-				            		<a href="#">Full Stack</a>
-				            		<a href="#">Maintenance</a>
-		              		</div>
-				          		<div class="mega-column">
-				            		<h3>Design</h3>
-				            		<a href="#">UI/UX</a>
-				            		<a href="#">Branding</a>
-				            		<a href="#">Illustration</a>
-				            		<a href="#">Graphic Design</a>
-				          		</div>
-				          		<div class="mega-column">
-				            		<h3>Marketing</h3>
-				            		<a href="#">SEO</a>
-				            		<a href="#">Content Strategy</a>
-				            		<a href="#">Email Campaigns</a>
-				            		<a href="#">Social Media</a>
-				          		</div>
-				          		 <div class="mega-column">
-				            		<h3>Marketing</h3>
-				            		<a href="#">SEO</a>
-				            		<a href="#">Content Strategy</a>
-				            		<a href="#">Email Campaigns</a>
-				            		<a href="#">Social Media</a>
-				          		</div>
-				       		 </div>
-				      </div>
-					</li>
-					<li><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/car-white.svg'>motors</a>
-					</li>
-					<li class="dropdown"><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/house-white.svg'>real estate</a>
-						<ul class="dropdown-container">
-							<li><span></span><a href='#'>house for sell</a></li>
-							<li><span></span><a href='#'>apartments</a></li>
-							<li><span></span><a href='#'>rental properties</a></li>
-							<li><span></span><a href='#'>commercial</a></li>
-							<li><span></span><a href='#'>lands and sites</a></li>
-						</ul>
-					</li>
-					<li><a href='#'>how it works</a></li>
-					<li><a href='#'>for dealers</a></li>
-				</ul>
-	 		</nav>
-	 	</div>
- 	</div>
- 	<div class='mobile-menu-container'>
- 	 	<div class='row main-header'>
-	 		<div class="col col-xs-4 col-lg-2">
-	 			<div class="logo-container">
-	 				<img src='<?php echo $cdn_url; ?>/media/logo/logo.png'>
-	 			</div>
-	 		</div>
-	 		<div class="col col-xs-8 col-lg-10">
-	 			<div class="search-container">
-	 				<ul class='header-buttons'>
-	 					<li class="btn btn-white search-btn dropdown"><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/search-black.svg'></a>
-	 					<li class="btn btn-white account-btn dropdown"><img src='<?php echo $cdn_url; ?>/media/icons/user-black.svg'></a>
-	 						<ul class="dropdown-container">
-	 							<li><a href='#'>My Profile</a></li>
-	 							<li><a href='#'>My listing</a></li>
-	 							<li><a href='#'>Sign Out</a></li>
-								<li class="btn sell-btn white-color"><a>Sell items</a></li>
-	 						</ul>
-	 					</li>
-	 					<li class="btn message-btn"><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/message-black.svg'></a></li>
-	 					<li class="btn notification-btn"><a href=""><img src='<?php echo $cdn_url; ?>/media/icons/notification-black.svg'></a></li>
-	 				</ul>
-	 			</div>
-	 		</div>
-	 	</div>
-	 	<div class="search-bar-container">
-  			<input class='search-box' type="text" name="seach-box" placeholder="Search items ...">
-		</div>
-	 	<div class="row bottom-header mobile-menu-row">
-	 		<nav class="menu-list">
-				<ul>
-					<li class="has-mega"><a href='#'>browse</a>
-						<div class="mega-content">
-		           		<div class="mega-row">
-		              		<div class="mega-column">
-				            		<h3>Web Development</h3>
-				            		<a href="#">Frontend</a>
-				            		<a href="#">Backend</a>
-				            		<a href="#">Full Stack</a>
-				            		<a href="#">Maintenance</a>
-		              		</div>
-				          		<div class="mega-column">
-				            		<h3>Design</h3>
-				            		<a href="#">UI/UX</a>
-				            		<a href="#">Branding</a>
-				            		<a href="#">Illustration</a>
-				            		<a href="#">Graphic Design</a>
-				          		</div>
-				          		<div class="mega-column">
-				            		<h3>Marketing</h3>
-				            		<a href="#">SEO</a>
-				            		<a href="#">Content Strategy</a>
-				            		<a href="#">Email Campaigns</a>
-				            		<a href="#">Social Media</a>
-				          		</div>
-				          		 <div class="mega-column">
-				            		<h3>Marketing</h3>
-				            		<a href="#">SEO</a>
-				            		<a href="#">Content Strategy</a>
-				            		<a href="#">Email Campaigns</a>
-				            		<a href="#">Social Media</a>
-				          		</div>
-				       		 </div>
-				      </div>
-				    </li>
-					<li><a href='#'><img src='<?php echo $cdn_url; ?>/media/icons/car-white.svg'>motors</a></li>
-					<li class="dropdown"><a><img src='<?php echo $cdn_url; ?>/media/icons/house-white.svg'>real estate</a>
-						<ul class="dropdown-container">
-							<li><span></span><a href='#'>house for sell</a></li>
-							<li><span></span><a href='#'>apartments</a></li>
-							<li><span></span><a href='#'>rental properties</a></li>
-							<li><span></span><a href='#'>commercial</a></li>
-							<li><span></span><a href='#'>lands and sites</a></li>
-						</ul>
-					</li>
-					<li class="hamburger-menu">
-						<div class="icon">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-						<ul class='dropdown-container'>
-							<li><a href='#'>house for sell</a></li>
-							<li><a href='#'>apartments</a></li>
-						</ul>
-					</li>	
-				</ul>
-	 		</nav>
-	 	</div>
- 	</div>
+<header class='section main-header menu-close'>
+    <div class='row'>
+        <div class='col col-xs-10 col-lg-5'>
+            <div class='logo-container'>
+                <div class='logo'>
+                    <a href='<@site_url>'><img src='<@cdn_url>/media/global/logo-dark.webp' alt='Yogalife logo'></a>
+                </div>
+                <div class='contact-info'>
+                    <ul>
+                        <li><img alt='' src='<@cdn_url>/media/icons/mail-white.svg'><a href='mailto:shweta@yogalife.org'>shweta@yogalife.org</a></li>
+                        <li><img alt='' src='<@cdn_url>/media/icons/phone-white.svg'><a href='tel:0032468156160'>0032 – 468156160</a></li>
+                    </ul>
+                </div>
+                <div class='rys-200'>
+                    <span><img src='<@cdn_url>/media/global/200-RYS-logo.webp' alt='200-rys-logo'></span>
+                    <span><img src='<@cdn_url>/media/global/20-year-logo.webp' alt='20 year logo'></span>
+                    <span><img src='<@cdn_url>/media/global/300-RYS-logo.webp' alt='200-rys-logo'></span>
+                </div>
+            </div>
+        </div>
+        <div class='col col-xs-2 col-lg-7'>
+            <nav class="navbar">
+                <div class="mobile-menu-toggle">
+                    <div class='toggle-menu-open'><span></span><span></span><span></span></div>
+                    <div class='toggle-menu-close'>✕</div>
+                </div>
+                <ul class="navbar-nav">
+                    <li><a class="nav-link" href="<@site_url>">Home</a></li>
+                    <li class='dropdown'><a class="nav-link" href="<@site_url>/over-ons">Yogalife<img class='dropdown-icon' src='<@cdn_url>/media/icons/dropdown-white.svg' alt=''></a>
+                    	<ul class='dropdown-container'>
+                    	    <li><a class="nav-link" href="<@site_url>/about">About</a></li>
+                    	    <li><a class="nav-link" href="<@site_url>/testimonial">Testimonial</a></li>
+                    	    <li><a class="nav-link" href="<@site_url>/gallery">Yoga Gallery</a></li>
+                    	</ul>
+                    </li>
+                    
+                    <li><a class="nav-link" href="<@site_url>/yoga-teacher-training">Yoga Teacher Training</a></li>
+                    <li class='dropdown'><a class="nav-link" href="#">Advanced Yogic Studies<img class='dropdown-icon' src='<@cdn_url>/media/icons/dropdown-white.svg' alt=''></a>
+                    	<ul class='dropdown-container'>
+                    	    <li><a class="nav-link" href="<@site_url>/yoga-nidra">Yoga Nidra</a></li>
+                    	    <li><a class="nav-link" href="<@site_url>/sadhana">Sadhana</a></li>
+                    	    <li><a class="nav-link" href="<@site_url>/anatomy">Anatomy</a></li>
+                            <li><a class="nav-link" href="<@site_url>/pranayama">Pranayama</a></li>
+                    	</ul>
+                    </li>
+                  </ul>
+              </nav>
+        </div>
+    </div>
 </header>
-
-<script>
-  const searchIcon = document.querySelector('.search-btn');
-  const searchBar = document.querySelector('.search-bar-container');
-
-  searchIcon.addEventListener('click', () => {
-    searchBar.classList.toggle('active');
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-  const hamburgers = document.querySelectorAll('.mobile-menu-row .hamburger-menu');
-
-  hamburgers.forEach(hamburger => {
-    hamburger.addEventListener('click', () => {
-      const dropdown = hamburger.querySelector('.dropdown-container');
-      if (dropdown) {
-        dropdown.classList.toggle('active'); // toggle active class
-      }
-    });
-  });
-});
-</script>
