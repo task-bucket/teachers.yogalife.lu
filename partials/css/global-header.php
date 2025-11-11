@@ -16,7 +16,7 @@ body{
 .main-header .navbar-nav a{
     color: #fff;
     font-family: Graphie-Bold;
-    font-size: 15px;
+    font-size: 20px;
     padding: 0 10px;
     padding-bottom: 10px;
 }
@@ -38,6 +38,7 @@ body{
 }
 .main-header .contact-info a{
     color: #fff;
+    font-size: 20px;
 }
 .main-header .contact-info img{
     margin-right: 8px;

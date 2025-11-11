@@ -3,12 +3,16 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 require_once('../config.php');
-echo "Config loaded successfully<br>";
+require_once(__DIR__ . '/../libraries/phpmailer/vendor/autoload.php'); // PHPMailer autoload
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// ---- DB CONNECTION CHECK ---- //
 if (!$conn) {
-    die('Database connection failed: ' . mysqli_connect_error());
+    die('❌ Database connection failed: ' . mysqli_connect_error());
 } else {
-    echo 'DB connected!<br>';
+    echo "✅ DB connected!<br>";
 }
 
 // ---- FORM FIELDS ---- //
@@ -18,26 +22,74 @@ $course      = $_POST['course'] ?? '';
 $email       = $_POST['email'] ?? '';
 $language    = $_POST['language'] ?? '';
 $description = $_POST['description'] ?? '';
+$listing_type = ($_POST['listing-type'] == 'free') ? 'free' : 'paid';
 $terms       = ($_POST['terms-acceptance'] === 'Yes') ? 1 : 0;
 
-echo "Step 2: Form fields loaded<br>";
 
-// ---- IMAGE UPLOAD ---- //
+// ---- IMAGE UPLOAD + RESIZE (GD Library) ---- //
 $image_name = ''; // default if no image uploaded
+function resizeAndCropImage($sourcePath, $destPath, $size = 400)
+{
+    // Get original dimensions
+    list($origWidth, $origHeight, $type) = getimagesize($sourcePath);
 
+    // Determine shortest side
+    $minSide = min($origWidth, $origHeight);
+
+    // Calculate coordinates to crop center square
+    $cropX = ($origWidth - $minSide) / 2;
+    $cropY = ($origHeight - $minSide) / 2;
+
+    // Create image resources
+    $src = imagecreatefromstring(file_get_contents($sourcePath));
+    $dst = imagecreatetruecolor($size, $size);
+
+    // Preserve transparency for PNG/GIF
+    if ($type == IMAGETYPE_PNG || $type == IMAGETYPE_GIF) {
+        imagecolortransparent($dst, imagecolorallocatealpha($dst, 0, 0, 0, 127));
+        imagealphablending($dst, false);
+        imagesavealpha($dst, true);
+    }
+
+    // Copy cropped area to new square image
+    imagecopyresampled(
+        $dst, $src,
+        0, 0,        // dst x,y
+        $cropX, $cropY,  // src x,y
+        $size, $size,    // dst width,height
+        $minSide, $minSide // src width,height
+    );
+
+    // Save according to original type
+    switch ($type) {
+        case IMAGETYPE_PNG:
+            imagepng($dst, $destPath, 8);
+            break;
+        case IMAGETYPE_GIF:
+            imagegif($dst, $destPath);
+            break;
+        case IMAGETYPE_WEBP:
+            imagewebp($dst, $destPath, 85);
+            break;
+        default:
+            imagejpeg($dst, $destPath, 85);
+    }
+
+    imagedestroy($src);
+    imagedestroy($dst);
+}
 if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+    echo "✅ Image detected<br>";
+
     $fileTmpPath = $_FILES['image']['tmp_name'];
     $fileName = $_FILES['image']['name'];
-    $fileSize = $_FILES['image']['size'];
-    $fileType = $_FILES['image']['type'];
     $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
 
-    $allowedExts = ['jpg', 'jpeg', 'png', 'gif'];
+    $allowedExts = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
     if (in_array($fileExt, $allowedExts)) {
         $newFileName = uniqid('teacher_', true) . '.' . $fileExt;
         $uploadDir = __DIR__ . '/../public/media/uploads/';
-        echo "$uploadDir";
 
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
@@ -46,36 +98,100 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         $destPath = $uploadDir . $newFileName;
 
         if (move_uploaded_file($fileTmpPath, $destPath)) {
+            resizeAndCropImage($destPath, $destPath, 400);
             $image_name = $newFileName;
-            echo "Step 3: Image uploaded successfully<br>";
+            echo "✅ Image resized and saved<br>";
         } else {
-            echo json_encode(["status" => "error", "message" => "Error moving uploaded file."]);
-            exit;
+            die("❌ Failed to move uploaded image file.");
         }
     } else {
-        echo json_encode(["status" => "error", "message" => "Invalid file type. Only JPG, PNG, GIF allowed."]);
-        exit;
+        die("❌ Invalid image type. Allowed: jpg, jpeg, png, gif, webp");
     }
 } else {
-    echo "No image uploaded<br>";
+    echo "ℹ️ No image uploaded<br>";
+}
+function createSlug($string) {
+    $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $string)));
+    return $slug;
 }
 
+$slug = createSlug($full_name);
 // ---- DATABASE INSERT ---- //
-$stmt = $conn->prepare("INSERT INTO teacher_applications (full_name, address, course, email, language, description, terms, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO teacher_applications 
+(full_name, slug,address, course, email, language, description, terms, image, listing_type, approved) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
+
 if (!$stmt) {
-    die("Prepare failed: " . $conn->error);
+    die("❌ Prepare failed: " . $conn->error);
 }
 
-echo "Step 4: Statement prepared<br>";
-
-$stmt->bind_param("ssssssis", $full_name, $address, $course, $email, $language, $description, $terms, $image_name);
-echo "Step 5: Params bound<br>";
+// 9 placeholders → 9 bind values → "sssssssss"
+$stmt->bind_param(
+    "ssssssssss",
+    $full_name,
+    $slug,
+    $address,
+    $course,
+    $email,
+    $language,
+    $description,
+    $terms,
+    $image_name,
+    $listing_type
+);
 
 if ($stmt->execute()) {
-    echo json_encode(["status" => "success", "message" => "Your application has been submitted!"]);
+    echo "✅ Teacher application saved successfully!";
 } else {
-    echo json_encode(["status" => "error", "message" => "Something went wrong: " . $stmt->error]);
+    echo "❌ Execute failed: " . $stmt->error;
 }
+
+if ($stmt->execute()) {
+    echo "✅ Data inserted successfully<br>";
+
+    // ---- SEND EMAIL ---- //
+    $mail = new PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'hemant.gaba21@gmail.com'; // your Gmail
+        $mail->Password = 'ymebpbbeybolvuzy'; // Gmail App Password
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        $mail->setFrom('hemant.gaba21@gmail.com', 'Yogalife Website');
+        $mail->addAddress('hemant.gaba21@gmail.com', 'Hemant Gaba');
+
+        $mail->isHTML(true);
+        $mail->Subject = '🧘 New Teacher Application Received';
+        $mail->Body = "
+            <h2>New Teacher Application</h2>
+            <p><strong>Name:</strong> {$full_name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Course:</strong> {$course}</p>
+            <p><strong>Address:</strong> {$address}</p>
+            <p><strong>Language:</strong> {$language}</p>
+            <p><strong>Description:</strong> {$description}</p>
+        ";
+
+        $mail->send();
+        echo "✅ Email sent successfully<br>";
+    } catch (Exception $e) {
+        echo "⚠️ Email failed: {$mail->ErrorInfo}<br>";
+    }
+
+ 
+    
+
+} else {
+    echo "❌ Error inserting data: " . $stmt->error;
+}
+
+$redirect_url = $site_url . '/';
+    header("Location: $redirect_url");
+    exit;
 
 $stmt->close();
 $conn->close();
+?>

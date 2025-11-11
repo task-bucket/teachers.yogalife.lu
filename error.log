@@ -304,3 +304,243 @@ Stack trace:
 #0 C:\laragon\www\yogalife-teachers\backend\read-teacher.php(10): mysqli->query('SELECT id, full...')
 #1 {main}
   thrown in C:\laragon\www\yogalife-teachers\backend\read-teacher.php on line 10
+[06-Nov-2025 06:25:42 UTC] PHP Warning:  require_once(../config.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php on line 4
+[06-Nov-2025 06:25:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../config.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php:4
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\index.php(17): require_once()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php on line 4
+[06-Nov-2025 06:25:45 UTC] PHP Warning:  require_once(../config.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php on line 4
+[06-Nov-2025 06:25:45 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../config.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php:4
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\index.php(17): require_once()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php on line 4
+[06-Nov-2025 06:25:58 UTC] PHP Warning:  require_once(../config.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php on line 4
+[06-Nov-2025 06:25:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../config.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php:4
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\index.php(17): require_once()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php on line 4
+[06-Nov-2025 06:44:10 UTC] PHP Warning:  require_once(../config.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 4
+[06-Nov-2025 06:44:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../config.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher-form.php:4
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\index.php(20): require_once()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 4
+[06-Nov-2025 06:44:22 UTC] PHP Warning:  require_once(../config.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 4
+[06-Nov-2025 06:44:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../config.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher-form.php:4
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\index.php(20): require_once()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 4
+[06-Nov-2025 06:44:25 UTC] PHP Warning:  require_once(../config.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 4
+[06-Nov-2025 06:44:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../config.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher-form.php:4
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\index.php(20): require_once()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 4
+[06-Nov-2025 10:34:43 UTC] PHP Warning:  require_once(C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:34:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:34:55 UTC] PHP Warning:  require_once(C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:34:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:35:02 UTC] PHP Warning:  require_once(C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:35:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:35:15 UTC] PHP Warning:  require_once(C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:35:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\laragon\www\yogalife-teachers\backend/../libraries/phpmail/vendor/autoload.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 6
+[06-Nov-2025 10:44:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function equire_once() in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 7
+[06-Nov-2025 10:44:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function equire_once() in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 7
+[06-Nov-2025 10:45:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function equire_once() in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 7
+[06-Nov-2025 10:46:01 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 28
+[06-Nov-2025 11:04:19 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:52
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 52
+[06-Nov-2025 11:08:46 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:52
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 52
+[06-Nov-2025 11:10:03 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 28
+[06-Nov-2025 11:56:19 UTC] PHP Parse error:  syntax error, unexpected single-quoted string " alt=", expecting "," or ";" in C:\laragon\www\yogalife-teachers\partials\html\global-header.php on line 6
+[06-Nov-2025 11:57:18 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "media" in C:\laragon\www\yogalife-teachers\partials\html\global-header.php:6
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\pages\yogalife-teachers.php(102): require_once()
+#1 C:\laragon\www\yogalife-teachers\index.php(17): require_once('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\yogalife-teachers\partials\html\global-header.php on line 6
+[06-Nov-2025 12:34:21 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:53
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 53
+[06-Nov-2025 12:36:07 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:53
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 53
+[06-Nov-2025 12:36:20 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:53
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 53
+[06-Nov-2025 12:36:36 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:53
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 53
+[06-Nov-2025 12:38:43 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 28
+[06-Nov-2025 12:40:39 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:53
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 53
+[06-Nov-2025 12:42:13 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:65
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 65
+[06-Nov-2025 12:53:26 UTC] PHP Fatal error:  Cannot declare class ComposerAutoloaderInit2185d2f99bcd56787481d9357a5972d3, because the name is already in use in C:\laragon\www\yogalife-teachers\vendor\composer\autoload_real.php on line 5
+[06-Nov-2025 13:11:48 UTC] PHP Warning:  require_once(C:\laragon\www\yogalife-teachers\backend/libraries/intervention/vendor/autoload.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 7
+[06-Nov-2025 13:11:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\laragon\www\yogalife-teachers\backend/libraries/intervention/vendor/autoload.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 7
+[06-Nov-2025 13:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:22
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 22
+[06-Nov-2025 13:34:26 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 21
+[06-Nov-2025 13:40:28 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 21
+[06-Nov-2025 13:42:59 UTC] PHP Fatal error:  Uncaught Error: Class "Intervention\Image\ImageManagerStatic" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 21
+[06-Nov-2025 13:46:57 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 30
+[06-Nov-2025 13:46:57 UTC] PHP Fatal error:  Uncaught Error: Class "PHPMailer" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:106
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 106
+[07-Nov-2025 04:52:06 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 30
+[07-Nov-2025 04:52:06 UTC] PHP Fatal error:  Uncaught Error: Class "PHPMailer" not found in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:106
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 106
+[07-Nov-2025 06:17:08 UTC] PHP Deprecated:  Implicit conversion from float 135.5 to int loses precision in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 53
+[07-Nov-2025 09:25:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssssi', 'Test 2', 'test', 'test 2', 'test@test.com', 'English', 'Test', 1, '', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 09:25:45 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssssi', 'Test 2', 'test', 'test 2', 'test@test.com', 'English', 'Test', 1, 'teacher_690dbb1...', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 09:26:00 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssssi', 'Test 2', 'test', 'test 2', 'test@test.com', 'English', 'Test', 1, 'teacher_690dbb2...', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 09:26:08 UTC] PHP Warning:  Undefined array key "listing-type" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 25
+[07-Nov-2025 09:26:08 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 26
+[07-Nov-2025 09:26:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssssi', '', '', '', '', '', '', 0, '', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 10:09:31 UTC] PHP Warning:  Undefined array key "listing-type" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 25
+[07-Nov-2025 10:09:31 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 26
+[07-Nov-2025 10:09:31 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssss', '', '', '', '', '', '', 0, '', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 10:09:44 UTC] PHP Warning:  Undefined array key "listing-type" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 25
+[07-Nov-2025 10:09:44 UTC] PHP Warning:  Undefined array key "terms-acceptance" in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 26
+[07-Nov-2025 10:09:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssss', '', '', '', '', '', '', 0, '', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 10:09:57 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssss', 'Test 2', 'test', 'test 2', 'test@test.com', 'English', 'Test', 1, 'teacher_690dc57...', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 10:10:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssss', 'Test 2', 'test', 'test 2', 'test@test.com', 'English', 'Test', 1, 'teacher_690dc58...', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 10:12:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:123
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(123): mysqli_stmt->bind_param('sssssssss', 'Test 2', 'test', 'test 2', 'test@test.com', 'English', 'Test', 1, 'teacher_690dc60...', 'paid', NULL)
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 123
+[07-Nov-2025 10:44:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'test-2' for key 'teacher_applications.slug' in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:149
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(149): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 149
+[07-Nov-2025 11:49:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'manoj' for key 'teacher_applications.slug' in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:149
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(149): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 149
+[07-Nov-2025 13:15:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'hemant' for key 'teacher_applications.slug' in C:\laragon\www\yogalife-teachers\backend\create-teacher.php:149
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\backend\create-teacher.php(149): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\backend\create-teacher.php on line 149
+[10-Nov-2025 08:14:25 UTC] PHP Warning:  require_once(partials/html/global-header-includes.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 25
+[10-Nov-2025 08:14:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'partials/html/global-header-includes.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher.php:25
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 25
+[10-Nov-2025 09:44:07 UTC] PHP Warning:  require_once(partials/html/global-header.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:44:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'partials/html/global-header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher.php:37
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:44:23 UTC] PHP Warning:  require_once(partials/html/global-header.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:44:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'partials/html/global-header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher.php:37
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:44:24 UTC] PHP Warning:  require_once(partials/html/global-header.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:44:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'partials/html/global-header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher.php:37
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:44:25 UTC] PHP Warning:  require_once(partials/html/global-header.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:44:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'partials/html/global-header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher.php:37
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher.php on line 37
+[10-Nov-2025 09:47:43 UTC] PHP Warning:  require_once(../partials/html/global-header.php): Failed to open stream: No such file or directory in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 17
+[10-Nov-2025 09:47:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../partials/html/global-header.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\yogalife-teachers\pages\teacher-form.php:17
+Stack trace:
+#0 C:\laragon\www\yogalife-teachers\index.php(20): require_once()
+#1 {main}
+  thrown in C:\laragon\www\yogalife-teachers\pages\teacher-form.php on line 17

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <?php require_once('partials/html/global-header-includes.php') ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,7 +42,7 @@
                     <div class='col col-xs-12'>
                         <div class='form-group'>
                             <label for='teacher-course' class='required-mark'>Course</label>
-                            <input id='teacher-course' name='course' type='text' placeholder='Your address' required>
+                            <input id='teacher-course' name='course' type='text' placeholder='Your Course' required>
                         </div>
                     </div>
                 </div>
@@ -64,8 +65,27 @@
                   <div class='row form-row'>
                     <div class='col col-xs-12'>
                         <div class='form-group'>
-                            <label for='teacher-description' class='required-mark'>Description</label>
+                            <label for='teacher-description'>Description</label>
                             <textarea id='teacher-description' name='description' placeholder='Tell us about yourself'></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class='row form-row'>
+                    <div class='col col-xs-12'>
+                        <div class='form-group'>
+                            <label for='teacher-image'>Upload Image</label>
+                            <input id='teacher-image' name='image' type='file' accept="image/*">
+                        </div>
+                    </div>
+                </div>
+                  <div class='row form-row'>
+                    <div class='col col-xs-12'>
+                        <div class='form-group'>
+                            <label for='teacher-image'>Which Listing type do you need?</label>
+                            <div class='form-inline-element'>
+                                <label><input name='listing-type' type='radio' value='free' required>Free</label>
+                                <label><input name='listing-type' type='radio' value='paid' required>Paid</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,14 +100,7 @@
                         </div>
                     </div>
                 </div>
-                <div class='row form-row'>
-                    <div class='col col-xs-12'>
-                        <div class='form-group'>
-                            <label for='teacher-image'>Upload Image</label>
-                            <input id='teacher-image' name='image' type='file' accept="image/*">
-                        </div>
-                    </div>
-                </div>
+
                 <div class='form-group'>
                     <button type='submit' class='btn btn-yellow'>Submit</button>
                 </div>
