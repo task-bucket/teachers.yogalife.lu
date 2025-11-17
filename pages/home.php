@@ -45,6 +45,7 @@
 		    width: calc(33% - 40px);
 		    border: 1px solid #eee;
 		    margin-right: 20px;
+		    margin-bottom:30px;
 		}
 		.grid h2{
 		    padding: 20px 20px 0 20px;
