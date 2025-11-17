@@ -84,7 +84,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
 
     if (in_array($fileExt, $allowedExts)) {
         $newFileName = uniqid('teacher_', true) . '.' . $fileExt;
-        $uploadDir = __DIR__ . '/../public/media/uploads/';
+        $uploadDir =  $site_url . '/media/uploads/';
 
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);

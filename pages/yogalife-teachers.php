@@ -41,18 +41,28 @@
 		    align-items: center;
 		}
 		.grid{
-		    width: calc(33% - 40px);
+		    width: calc(33% - 20px);
 		    border: 1px solid #eee;
 		    margin-right: 20px;
         border-radius: 4px;
         overflow: hidden;
         display: inline-grid;
+
+		}
+		.grid:nth-child(3n)
+		 {
+		    margin-right: 0;
 		}
 		@media all and (max-width: 980px) and (min-width: 481px){
 		.grid{
 		    width: calc(50% - 40px);
 		    margin-right: 20px;}
+		    .grid:nth-child(2n)
+		 {
+		    margin-right: 0;
 		}
+		}
+	
 		@media all and (max-width: 480px){
 		.grid{
 		    width: 100%;
