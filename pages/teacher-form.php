@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <?php require_once('partials/html/global-header-includes.php') ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +18,7 @@
     <div class='row main-row'>
         <div class='col col-xs-12'>
             <h1>Please fill the form</h1>
-            <form class='form' action='backend/create-teacher.php' method='post' enctype="multipart/form-data">
+            <form class='form' action='create-teacher' method='post' enctype="multipart/form-data">
             <input type='hidden' name='form-name' value='Teacher Form'>
                 <div class='row form-row'>
                     <div class='col col-xs-12'>
@@ -89,6 +88,56 @@
                         </div>
                     </div>
                 </div>
+         <!--        <div class="hide">
+                    <div class='row form-row'>
+                        <div class='col col-xs-12'>
+                            <div class='form-group'>
+                                <label for='yoga-style' class='required-mark'>Yoga style</label>
+                                <input id='yoga-style' name='yoga-style' type='text' placeholder='Yoga Style' required>
+                            </div>
+                        </div>
+                    </div>
+                      <div class='row form-row'>
+                        <div class='col col-xs-12'>
+                            <div class='form-group'>
+                                <label for='classes'>Classes</label>
+                                <textarea id='classes' name='classes' placeholder='Classes'></textarea>
+                            </div>
+                        </div>
+                    </div>
+                     <div class='row form-row'>
+                        <div class='col col-xs-12'>
+                            <div class='form-group'>
+                                <label for='workshops'>Workshops</label>
+                                <textarea id='workshops' name='workshops' placeholder='Workshops'></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row form-row'>
+                        <div class='col col-xs-12'>
+                            <div class='form-group'>
+                                <label for='retreats'>Retreats</label>
+                                <textarea id='retreats' name='retreats' placeholder='Retreats'></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row form-row'>
+                        <div class='col col-xs-12'>
+                            <div class='form-group'>
+                                <label for='corporate-yoga'>Corporate Yoga</label>
+                                <textarea id='corporate-yoga' name='corporate-yoga' placeholder='Corporate yoga'></textarea>
+                            </div>
+                        </div>
+                    </div>
+                     <div class='row form-row'>
+                        <div class='col col-xs-12'>
+                            <div class='form-group'>
+                                <label for='teacher-phone' class='required-mark'>Phone Number</label>
+                                <input id='teacher-phone' name='teacher-phone' type='text' placeholder='Phone Number' required>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
                 <div class='row form-row'>
                      <div class='col col-xs-12'>
                         <div class='form-group'>

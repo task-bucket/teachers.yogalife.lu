@@ -1,11 +1,11 @@
 @font-face{
     font-family: Graphie-Bold;
-    src: url("<@cdn_url>/fonts/Graphie-Bold.woff2");
+    src: url("<?php echo $cdn_url; ?>/fonts/Graphie-Bold.woff2");
     font-display: swap;
 }
 @font-face{
     font-family: Graphie-Regular;
-    src: url("<@cdn_url>/fonts/Graphie-Regular.woff2");
+    src: url("<?php echo $cdn_url; ?>/fonts/Graphie-Regular.woff2");
     font-display: swap;
 }
 :root{
