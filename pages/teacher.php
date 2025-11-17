@@ -1,20 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-$slug = $_GET['slug'] ?? '';
-
-if (!$slug) {
-    die("❌ No teacher selected.");
-}
-
-$stmt = $conn->prepare("SELECT * FROM teacher_applications WHERE slug = ? AND approved = 1");
-$stmt->bind_param("s", $slug);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows === 0) {
-    die("❌ Teacher not found or not approved.");
-}
 
 $teacher = $result->fetch_assoc();
 ?>

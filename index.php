@@ -12,37 +12,36 @@
     $requested_file =  rtrim($query_string[0],'/\\');
     $requested_file =  ltrim($requested_file,'/\\');
 
-        $slug = $_GET['slug'] ?? null;
 
-        $request_url = $_SERVER['REQUEST_URI'];
-        $query_string = explode('?', $request_url);
+    $sql = "SELECT * FROM teacher_applications WHERE slug='$requested_file'  AND approved = 1";
+    $result = mysqli_query($conn,$sql);
 
-        $requested_file = rtrim($query_string[0], '/\\');
-        $requested_file = ltrim($requested_file, '/\\');
-
-        if ($slug) {
-            require_once('pages/teacher.php');
-            exit;
-        }
-
+    if (mysqli_num_rows($result) > 0){
+        $slug = $requested_file;
+        require_once('pages/teacher.php');
+    }
+    else{
         switch ($requested_file) {
-        case "":
-            require_once('pages/yogalife-teachers.php');
-            break;
-        case "teacher-form":
-            require_once('pages/teacher-form.php');
-            break;
-        case "create-teacher":
-            require_once('backend/create-teacher.php');
-            break;
-        case "read-teacher":
-            require_once('backend/read-teacher.php');
-            break;
-        default:
-            header("HTTP/1.1 404 Not Found");
-            echo "404 page not found";
-            break;
-    }  
+            case "":
+                require_once('pages/yogalife-teachers.php');
+                break;
+            case "teacher-form":
+                require_once('pages/teacher-form.php');
+                break;
+            case "create-teacher":
+                require_once('backend/create-teacher.php');
+                break;
+            case "read-teacher":
+                require_once('backend/read-teacher.php');
+                break;
+            default:
+                header("HTTP/1.1 404 Not Found");
+                echo "404 page not found";
+                break;
+        } 
+    }
+
+     
      
  
 
