@@ -216,7 +216,7 @@
 <?php require_once('partials/html/global-footer.php'); ?>	
 
 <script>
-document.getElementById("searchInput").addEventListener("keyup", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("teacher-list");
   const searchInput = document.getElementById("searchInput");
   const paginationContainer = document.getElementById("pagination");
