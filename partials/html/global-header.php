@@ -14,8 +14,8 @@
                     <div class='toggle-menu-close'>✕</div>
                 </div>
                 <ul class="navbar-nav">
-                    <li><a class="nav-link" href="<?php echo $site_url; ?>/teacher-form">Teachers Form</a></li>      
-                    <li><a class="nav-link" href="<?php echo $site_url; ?>">Yoga Teachers</a></li>
+                    <li><a class="nav-link" href="<?php echo $site_url; ?>">View Listing</a></li>
+                    <li class="btn"><a class="nav-link btn btn-yellow" href="<?php echo $site_url; ?>/teacher-form">Submit Listing</a></li> 
               </nav>
         </div>
     </div>

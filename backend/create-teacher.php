@@ -83,8 +83,14 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     $allowedExts = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
     if (in_array($fileExt, $allowedExts)) {
-        $newFileName = uniqid('teacher_', true) . '.' . $fileExt;
-        $uploadDir =  $site_url . '/media/uploads/';
+
+        $random20 = '';
+        for ($i = 0; $i < 20; $i++) {
+            $random20 .= mt_rand(0, 9);
+        }
+
+        $newFileName = 'teacher_' . $random20 . '.' . $fileExt;
+        $uploadDir = __DIR__ . '/../public/media/uploads/';
 
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);

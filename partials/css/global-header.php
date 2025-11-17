@@ -18,9 +18,13 @@ body{
     color: #000;
     font-family: Graphie-Bold;
     font-size: 20px;
-    padding: 0 10px;
     padding-bottom: 10px;
 }
+
+.main-header .navbar-nav a.btn,.main-header .navbar-nav a.btn:hover{
+    color: #fff;
+}
+
 .main-header .navbar-nav a:hover{
     color: var(--brand-blue);
 }

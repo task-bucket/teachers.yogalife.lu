@@ -20,7 +20,7 @@ if (!empty($search)) {
 }
 
 // Prepare main query
-$sql .= " ORDER BY id DESC LIMIT ? OFFSET ?";
+$sql .= " ORDER BY id ASC LIMIT ? OFFSET ?";
 $stmt = $conn->prepare($sql);
 
 if (!empty($search)) {
