@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">
+  <title>Certified Yoga Teachers in Luxembourg – Yogalife Instructors</title>
+  <meta name="description" content="Find certified Yogalife yoga teachers in Luxembourg. Explore profiles, training background, teaching style, and specialties. Connect with trusted and experienced yoga instructors near you." />
 	<?php require_once('partials/html/global-header-includes.php') ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Yogalife Teacehers</title>
+	<title>Yogalife Teachers</title>
 	<style>
 		<?php require_once('partials/css/spark-grid.php') ?>
 		<?php require_once('partials/css/global-critical.php') ?>
@@ -26,13 +28,13 @@
 		    opacity: 0.4;
 		}*/
 		.hero-section .row{
-		    width: 100%;
+		    width: 90%;
 		    height: 100%;
 		    justify-content: center;
 		    align-items: center;
 		}
 		.hero-section .row h1{
-	      color: #000;
+	      color: var(--brand-blue);
 		    font-size: 60px;
 		    z-index: 9;
 		    text-align: center;
@@ -65,12 +67,18 @@
 		 		{
 		    	margin-right: 0;
 				}
+				.hero-section .row h1{
+					font-size: 40px;
+				}
 		}
 	
 		@media all and (max-width: 480px){
 		.grid{
 		    width: 100%;
 		    margin-right: 0}
+		    .hero-section .row h1{
+					font-size: 34px;
+				}
 		}
 		.grid h2{
 		    padding: 20px 20px 0 20px;
@@ -88,8 +96,8 @@
 		}
 		.search-bar {
 		  width: 100%;
-		  max-width: 400px;
-		  padding: 10px;
+		  max-width: 600px;
+		  padding: 15px;
 		  border: 1px solid #ddd;
 		  border-radius: 8px;
 		  margin-bottom: 20px;
@@ -141,7 +149,7 @@
     </div>
     <div class="row">
     <div class="col col-xs-12 col-lg-12 search-col">
-    	<span>Seach your Yogalife teacher</span>
+    	<span>Seach your Yoga teacher</span>
       <input type="text" id="searchInput" placeholder="Search by name, address, course, or language..." class="search-bar"/>
     </div>
   </div>

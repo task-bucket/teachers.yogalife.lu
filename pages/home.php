@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">
 	<?php require_once('partials/html/global-header-includes.php') ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">

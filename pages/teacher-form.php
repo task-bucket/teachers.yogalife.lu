@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">
     <?php require_once('partials/html/global-header-includes.php') ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -141,7 +142,7 @@
                 <div class='row form-row'>
                      <div class='col col-xs-12'>
                         <div class='form-group'>
-                            <label>Agree to our <a class ='yellow-link' href='<@site_url>/terms-and-conditions' target='_blank'>Terms</a> and <a class ='yellow-link' href='<@site_url>/terms-and-conditions' target='_blank'>Privacy Policy</a>?<span class='required-mark'></span></label>
+                            <label>Agree to our <a class ='yellow-link' href='https://yogalife.lu/terms-and-conditions' target='_blank'>Terms</a> and <a class ='yellow-link' href='<@site_url>/terms-and-conditions' target='_blank'>Privacy Policy</a>?<span class='required-mark'></span></label>
                             <div class='form-inline-element'>
                                 <label><input name='terms-acceptance' type='radio' value='Yes' required> Yes</label>
                                 <label><input name='terms-acceptance' type='radio' value='No' required> No</label>
