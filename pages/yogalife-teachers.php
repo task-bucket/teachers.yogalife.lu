@@ -49,7 +49,7 @@
 		.grid{
 		    width: calc(33% - 20px);
 		    border: 1px solid #eee;
-		    margin-right: 20px;
+		    margin-right: 30px;
         border-radius: 4px;
         overflow: hidden;
         display: inline-grid;
@@ -62,7 +62,7 @@
 		@media all and (max-width: 980px) and (min-width: 481px){
 		.grid{
 		    width: calc(50% - 40px);
-		    margin-right: 20px;}
+		    margin-right: 30px;}
 		    .grid:nth-child(2n)
 		 		{
 		    	margin-right: 0;
