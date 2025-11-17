@@ -19,13 +19,17 @@
         case "teacher-form":
             require_once('pages/teacher-form.php');
             break;
-
-
+        case "create-teacher":
+            require_once('backend/create-teacher.php');
+            break;
+        case "read-teacher":
+            require_once('backend/read-teacher.php');
+            break;
         default:
             header("HTTP/1.1 404 Not Found");
             echo "404 page not found";
             break;
-    } 
+    }  
      
  
 

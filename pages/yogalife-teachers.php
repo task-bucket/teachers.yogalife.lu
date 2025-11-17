@@ -11,13 +11,12 @@
 		<?php require_once('partials/css/global-critical.php') ?>
 		<?php require_once('partials/css/global-header.php') ?>
 		.hero-section{
-		    background-image: url('<?php echo $cdn_url; ?>/media/pages/home/yoga-group.webp');
-		    height: 250px;
+		   /* background-image: url('<?php echo $cdn_url; ?>/media/pages/home/yoga-group.webp');*/
 		    background-size: cover;
 		    position: relative;
 		    background-position: center;
 		}
-		section.section.hero-section:after {
+/*		section.section.hero-section:after {
 		    content: " ";
 		    background: #000;
 		    position: absolute;
@@ -25,7 +24,7 @@
 		    height: 100%;
 		    top: 0;
 		    opacity: 0.4;
-		}
+		}*/
 		.hero-section .row{
 		    width: 100%;
 		    height: 100%;
@@ -33,8 +32,8 @@
 		    align-items: center;
 		}
 		.hero-section .row h1{
-		    color: #fff;
-		    font-size: 80px;
+		    color: #000;
+		    font-size: 60px;
 		    z-index: 9;
 		}
 		.grid-container{
@@ -92,13 +91,16 @@
 			text-align: center;
 		}
 		.search-col span{
-			font-size: 20px;
-			color: var(--brand-yellow);
+	    font-size: 30px;
+	    color: var(--brand-yellow);
+	    display: block;
+	    margin-bottom: 20px;
 		}
-		.full-page-btn{
-			margin-top: 20px;
-			display: block;
+		.btn-container{
+			text-align: center;
+			margin: 40px 0;
 		}
+
 		<?php require_once('partials/css/global-footer.php') ?>
 	</style>
 </head>
@@ -106,11 +108,9 @@
 	<?php require_once('partials/html/global-header.php'); ?>	
 <section class='section hero-section'>
     <div class='row'>
-        <h1>Yoga Teachers</h1>
+        <h1>Yoga Teachers in Luxembourg</h1>
     </div>
-</section>
-<section class="section">
-  <div class="row">
+    <div class="row">
     <div class="col col-xs-12 col-lg-12 search-col">
     	<span>Seach your yogalife teacher</span>
       <input type="text" id="searchInput" placeholder="Search by name, address, course, or language..." class="search-bar"/>
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // ✅ Step 2: Add "Go Full Page" button only for paid listings
             const fullPageButton =
               teacher.listing_type === "paid"
-                ? `<a href="pages/teacher.php?slug=${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a>`
+                ? `<div class="btn-container"><a href="pages/teacher.php?slug=${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a></div>`
                 : "";
 
             // ✅ Step 3: Build HTML card
@@ -203,19 +203,19 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((err) => console.error("AJAX Error:", err));
   }
 
-  // Render pagination buttons
-  function renderPagination(totalPages, currentPage, search) {
-    paginationContainer.innerHTML = "";
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-      btn.className = i === currentPage ? "active" : "";
-      btn.addEventListener("click", () => {
-        loadTeachers(search, i);
-      });
-      paginationContainer.appendChild(btn);
-    }
-  }
+  // // Render pagination buttons
+  // function renderPagination(totalPages, currentPage, search) {
+  //   paginationContainer.innerHTML = "";
+  //   for (let i = 1; i <= totalPages; i++) {
+  //     const btn = document.createElement("button");
+  //     btn.textContent = i;
+  //     btn.className = i === currentPage ? "active" : "";
+  //     btn.addEventListener("click", () => {
+  //       loadTeachers(search, i);
+  //     });
+  //     paginationContainer.appendChild(btn);
+  //   }
+  // }
 
   // Initial load
   loadTeachers();

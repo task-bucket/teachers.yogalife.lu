@@ -5,12 +5,6 @@
                 <div class='logo'>
                     <a href='<?php echo $site_url; ?>'><img src='<?php echo $cdn_url; ?>/media/logo/yogalife-logo.webp ?>' alt='Yogalife logo'></a>
                 </div>
-                <div class='contact-info'>
-                    <ul>
-                        <li><img alt='' src='<@cdn_url>/media/icons/mail-white.svg'><a href='mailto:shweta@yogalife.org'>shweta@yogalife.org</a></li>
-                        <li><img alt='' src='<@cdn_url>/media/icons/phone-white.svg'><a href='tel:0032468156160'>0032 – 468156160</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
         <div class='col col-xs-2 col-lg-7'>

@@ -2,18 +2,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once('../config.php');
-require_once(__DIR__ . '/../libraries/phpmailer/vendor/autoload.php'); // PHPMailer autoload
+
+
+require_once('libraries/phpmailer/vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// ---- DB CONNECTION CHECK ---- //
-if (!$conn) {
-    die('❌ Database connection failed: ' . mysqli_connect_error());
-} else {
-    echo "✅ DB connected!<br>";
-}
+
+
 
 // ---- FORM FIELDS ---- //
 $full_name   = $_POST['full-name'] ?? '';
@@ -116,16 +113,32 @@ function createSlug($string) {
 }
 
 $slug = createSlug($full_name);
+
+// If full name empty, fallback slug
+if (empty($slug)) {
+    $slug = 'teacher-' . time();
+}
+
+// Ensure unique slug
+$check = $conn->prepare("SELECT COUNT(*) FROM teacher_applications WHERE slug = ?");
+$check->bind_param("s", $slug);
+$check->execute();
+$check->bind_result($count);
+$check->fetch();
+$check->close();
+if ($count > 0) {
+    $slug .= '-' . time();
+}
+
 // ---- DATABASE INSERT ---- //
 $stmt = $conn->prepare("INSERT INTO teacher_applications 
-(full_name, slug,address, course, email, language, description, terms, image, listing_type, approved) 
+(full_name, slug, address, course, email, language, description, terms, image, listing_type, approved) 
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
 
 if (!$stmt) {
     die("❌ Prepare failed: " . $conn->error);
 }
 
-// 9 placeholders → 9 bind values → "sssssssss"
 $stmt->bind_param(
     "ssssssssss",
     $full_name,
@@ -141,27 +154,21 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    echo "✅ Teacher application saved successfully!";
-} else {
-    echo "❌ Execute failed: " . $stmt->error;
-}
-
-if ($stmt->execute()) {
     echo "✅ Data inserted successfully<br>";
 
     // ---- SEND EMAIL ---- //
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = 'hemant.gaba21@gmail.com'; // your Gmail
-        $mail->Password = 'ymebpbbeybolvuzy'; // Gmail App Password
+        $mail->Username = $_ENV['MAIL_USER'];
+        $mail->Password = $_ENV['DB_PASS'];
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('hemant.gaba21@gmail.com', 'Yogalife Website');
-        $mail->addAddress('hemant.gaba21@gmail.com', 'Hemant Gaba');
+        $mail->setFrom($_ENV['MAIL_USER'], 'Yogalife Website');
+        $mail->addAddress($_ENV['MAIL_USER'], 'Hemant Gaba');
 
         $mail->isHTML(true);
         $mail->Subject = '🧘 New Teacher Application Received';
@@ -181,17 +188,13 @@ if ($stmt->execute()) {
         echo "⚠️ Email failed: {$mail->ErrorInfo}<br>";
     }
 
- 
-    
-
 } else {
     echo "❌ Error inserting data: " . $stmt->error;
 }
 
 $redirect_url = $site_url . '/';
-    header("Location: $redirect_url");
-    exit;
+header("Location: $redirect_url");
+exit;
 
 $stmt->close();
 $conn->close();
-?>
