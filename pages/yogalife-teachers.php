@@ -53,6 +53,7 @@
         border-radius: 4px;
         overflow: hidden;
         display: inline-grid;
+        	margin-bottom:30px;
 
 		}
 		.grid:nth-child(3n)
