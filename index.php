@@ -19,6 +19,9 @@
         case "teacher-form":
             require_once('pages/teacher-form.php');
             break;
+        case "teacher":
+            require_once('pages/teacher.php');
+            break;
         case "create-teacher":
             require_once('backend/create-teacher.php');
             break;

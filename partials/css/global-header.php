@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     z-index: 99;
+    background-color: #fff;
 }
 body{
     padding-top: 104px;
@@ -14,7 +15,7 @@ body{
 }
 
 .main-header .navbar-nav a{
-    color: #fff;
+    color: #000;
     font-family: Graphie-Bold;
     font-size: 20px;
     padding: 0 10px;
@@ -49,9 +50,7 @@ body{
     gap: 50px;
     align-items: center;
 }
-.main-header{
-    background-color:#F0AB1F;
-}
+
 .main-header .navbar{
     height: 100%;
 }
@@ -114,7 +113,7 @@ body{
     .main-header .mobile-menu-toggle span{
         display: block;
         height: 2px;
-        background: #fff;
+        background: #000;
         width: 30px;
         margin-bottom: 5px;
     }
