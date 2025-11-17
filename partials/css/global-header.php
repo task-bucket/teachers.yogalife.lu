@@ -6,6 +6,7 @@
     right: 0;
     z-index: 99;
     background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
 body{
     padding-top: 104px;
@@ -16,11 +17,14 @@ body{
 
 .main-header .navbar-nav a{
     color: #000;
-    font-family: Graphie-Bold;
+    font-family: Graphie-regular;
     font-size: 20px;
     padding-bottom: 10px;
+    margin-right: 20px;
 }
-
+.main-header .navbar-nav a:last-child{
+    margin-right: 0;
+}
 .main-header .navbar-nav a.btn,.main-header .navbar-nav a.btn:hover{
     color: #fff;
 }

@@ -6,6 +6,9 @@ $teacher = $result->fetch_assoc();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">  
+  <title>Yogalife Yoga Teachers in Luxembourg – Certified Instructor Directory</title>
+  <meta name="description" content="Browse the complete directory of certified Yogalife yoga teachers in Luxembourg. View profiles, experience, specialties, training background, and teaching styles. Connect with trusted, experienced yoga instructors near you." />
   <?php require_once('partials/html/global-header-includes.php') ?>
   <meta charset="UTF-8">
   <title><?= htmlspecialchars($teacher['full_name']) ?> - Yogalife</title>
