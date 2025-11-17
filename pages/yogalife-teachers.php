@@ -39,6 +39,10 @@
 		    display: flex;
 		    flex-direction: column;
 		    align-items: center;
+		    margin-bottom: 10px;
+		}
+		.hero-section .row h1 img{
+			margin:  10px 0;
 		}
 		.grid{
 		    width: calc(33% - 20px);
@@ -58,9 +62,9 @@
 		    width: calc(50% - 40px);
 		    margin-right: 20px;}
 		    .grid:nth-child(2n)
-		 {
-		    margin-right: 0;
-		}
+		 		{
+		    	margin-right: 0;
+				}
 		}
 	
 		@media all and (max-width: 480px){
@@ -137,7 +141,7 @@
     </div>
     <div class="row">
     <div class="col col-xs-12 col-lg-12 search-col">
-    	<span>Seach your yogalife teacher</span>
+    	<span>Seach your Yogalife teacher</span>
       <input type="text" id="searchInput" placeholder="Search by name, address, course, or language..." class="search-bar"/>
     </div>
   </div>
@@ -145,26 +149,74 @@
 <section class='section'>
     <div class='row'>
         <div class='col col-xs-12 col-lg-12'>
-            <div id="teacher-list" class='grid-container'>
-               
-            </div>
+          <div id="teacher-list" class="grid-container">
+					        <?php
+					        $sql = "SELECT * FROM teacher_applications WHERE approved = 1";
+					        $result = mysqli_query($conn, $sql);
+
+					        while ($row = mysqli_fetch_assoc($result)) {
+					        	$image = $row['image'] ?: 'default-image.png';
+										$imageUrl = "$site_url/public/media/uploads/$image";
+					        ?>
+
+					            <div class="grid">
+					                <div class="teacher-image">
+					                    <img src="<?php echo $imageUrl ?>" alt="<?php echo $row['full_name']; ?>" />
+					                </div>
+
+					                <h2><?php echo $row['full_name']; ?></h2>
+
+					                <p class="location">
+					                    <img alt="location" src="<?php echo $cdn_url; ?>/media/icons/location-yellow.svg">
+					                    <?php echo $row['address']; ?>
+					                </p>
+
+					                <p class="classes">
+					                    <img alt="Course" src="<?php echo $cdn_url; ?>/media/icons/course-yellow.svg">
+					                    <?php echo $row['course']; ?>
+					                </p>
+
+					                <p class="email">
+					                    <img alt="mail" src="<?php echo $cdn_url; ?>/media/icons/mail-yellow.svg">
+					                    <?php echo $row['email']; ?>
+					                </p>
+
+					                <p class="language">
+					                    <img alt="language" src="<?php echo $cdn_url; ?>/media/icons/language-yellow.svg">
+					                    <?php echo $row['language']; ?>
+					                </p>
+
+					                <p class="description">
+					                    <?php echo nl2br($row['description']); ?>
+					                </p>
+					                <?php if ($row['listing_type'] == 'paid') { ?>
+													    <div class="btn-container">
+													        <a class="btn btn-blue full-page-btn" href="<?php echo $site_url . '/' . $row['slug']; ?>">View Full Profile</a>
+													    </div>
+													<?php } ?>
+					            </div>
+					       			<?php
+					       			}
+
+					        ?>
+						</div>
         </div>
     </div>
     <div id="pagination" class="pagination"></div>
-
 </section>
 
 <?php require_once('partials/html/global-footer.php'); ?>	
+
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.getElementById("searchInput").addEventListener("keyup", function () {
   const container = document.getElementById("teacher-list");
   const searchInput = document.getElementById("searchInput");
   const paginationContainer = document.getElementById("pagination");
 
   let currentPage = 1;
   const limit = 3;
+  let debounceTimer;
 
-  // Function to load teachers (with optional search term)
   function loadTeachers(search = "", page = 1) {
     fetch(`backend/read-teacher.php?search=${encodeURIComponent(search)}&page=${page}&limit=${limit}`)
       .then((response) => response.json())
@@ -177,19 +229,16 @@ document.addEventListener("DOMContentLoaded", function () {
               ? `public/media/uploads/${teacher.image}`
               : `public/media/uploads/default-image.png`;
 
-            // ✅ Step 1: Generate slug from teacher name
             const teacherSlug = teacher.full_name
               .toLowerCase()
               .replace(/[^a-z0-9]+/g, "-")
               .replace(/(^-|-$)/g, "");
 
-            // ✅ Step 2: Add "Go Full Page" button only for paid listings
             const fullPageButton =
               teacher.listing_type === "paid"
-                ? `<div class="btn-container"><a href="<?php echo $site_url ?>/teacher?slug=${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a></div>`
+                ? `<div class="btn-container"><a href="<?php echo $site_url ?>/${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a></div>`
                 : "";
 
-            // ✅ Step 3: Build HTML card
             const html = `
               <div class="grid">
                 <div class="teacher-image">
@@ -228,31 +277,22 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((err) => console.error("AJAX Error:", err));
   }
 
-  // // Render pagination buttons
-  // function renderPagination(totalPages, currentPage, search) {
-  //   paginationContainer.innerHTML = "";
-  //   for (let i = 1; i <= totalPages; i++) {
-  //     const btn = document.createElement("button");
-  //     btn.textContent = i;
-  //     btn.className = i === currentPage ? "active" : "";
-  //     btn.addEventListener("click", () => {
-  //       loadTeachers(search, i);
-  //     });
-  //     paginationContainer.appendChild(btn);
-  //   }
-  // }
-
-  // Initial load
+  // Load initial list
   loadTeachers();
 
-  // Search event
+  // Debounced search event
   searchInput.addEventListener("keyup", function () {
-    const searchValue = searchInput.value.trim();
-    currentPage = 1;
-    loadTeachers(searchValue, currentPage);
+    clearTimeout(debounceTimer);
+
+    debounceTimer = setTimeout(() => {
+      const searchValue = searchInput.value.trim();
+      currentPage = 1;
+      loadTeachers(searchValue, currentPage);
+    }, 300); // wait 300ms after typing stops
   });
 });
 </script>
+
 
 
 
