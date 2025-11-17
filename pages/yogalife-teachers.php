@@ -32,18 +32,31 @@
 		    align-items: center;
 		}
 		.hero-section .row h1{
-		    color: #000;
+	      color: #000;
 		    font-size: 60px;
 		    z-index: 9;
-		}
-		.grid-container{
+		    text-align: center;
 		    display: flex;
-		    justify-content: flex-start;
+		    flex-direction: column;
+		    align-items: center;
 		}
 		.grid{
 		    width: calc(33% - 40px);
 		    border: 1px solid #eee;
 		    margin-right: 20px;
+        border-radius: 4px;
+        overflow: hidden;
+        display: inline-grid;
+		}
+		@media all and (max-width: 980px) and (min-width: 481px){
+		.grid{
+		    width: calc(50% - 40px);
+		    margin-right: 20px;}
+		}
+		@media all and (max-width: 480px){
+		.grid{
+		    width: 100%;
+		    margin-right: 0}
 		}
 		.grid h2{
 		    padding: 20px 20px 0 20px;
@@ -108,7 +121,9 @@
 	<?php require_once('partials/html/global-header.php'); ?>	
 <section class='section hero-section'>
     <div class='row'>
-        <h1>Yoga Teachers in Luxembourg</h1>
+        <h1>Yoga Teachers in Luxembourg
+        		<img src="<?php echo $cdn_url; ?>/media/pages/home/fancy-title-img.webp">
+        </h1>
     </div>
     <div class="row">
     <div class="col col-xs-12 col-lg-12 search-col">
@@ -137,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const paginationContainer = document.getElementById("pagination");
 
   let currentPage = 1;
-  const limit = 1;
+  const limit = 3;
 
   // Function to load teachers (with optional search term)
   function loadTeachers(search = "", page = 1) {
@@ -161,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // ✅ Step 2: Add "Go Full Page" button only for paid listings
             const fullPageButton =
               teacher.listing_type === "paid"
-                ? `<div class="btn-container"><a href="pages/teacher.php?slug=${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a></div>`
+                ? `<div class="btn-container"><a href="<?php echo $site_url ?>/teacher?slug=${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a></div>`
                 : "";
 
             // ✅ Step 3: Build HTML card

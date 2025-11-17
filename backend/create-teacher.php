@@ -12,7 +12,6 @@ use PHPMailer\PHPMailer\Exception;
 
 
 
-// ---- FORM FIELDS ---- //
 $full_name   = $_POST['full-name'] ?? '';
 $address     = $_POST['address'] ?? '';
 $course      = $_POST['course'] ?? '';
@@ -76,7 +75,6 @@ function resizeAndCropImage($sourcePath, $destPath, $size = 400)
     imagedestroy($dst);
 }
 if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-    echo "✅ Image detected<br>";
 
     $fileTmpPath = $_FILES['image']['tmp_name'];
     $fileName = $_FILES['image']['name'];
@@ -154,7 +152,6 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    echo "✅ Data inserted successfully<br>";
 
     // ---- SEND EMAIL ---- //
     $mail = new PHPMailer(true);
@@ -163,12 +160,12 @@ if ($stmt->execute()) {
         $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
         $mail->Username = $_ENV['MAIL_USER'];
-        $mail->Password = $_ENV['DB_PASS'];
+        $mail->Password = $_ENV['MAIL_PASS'];
         $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Port = $_ENV['MAIL_PORT'];
 
-        $mail->setFrom($_ENV['MAIL_USER'], 'Yogalife Website');
-        $mail->addAddress($_ENV['MAIL_USER'], 'Hemant Gaba');
+        $mail->setFrom($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
+        $mail->addAddress($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
 
         $mail->isHTML(true);
         $mail->Subject = '🧘 New Teacher Application Received';
@@ -183,13 +180,13 @@ if ($stmt->execute()) {
         ";
 
         $mail->send();
-        echo "✅ Email sent successfully<br>";
+       
     } catch (Exception $e) {
         echo "⚠️ Email failed: {$mail->ErrorInfo}<br>";
     }
 
 } else {
-    echo "❌ Error inserting data: " . $stmt->error;
+    echo "Error inserting data: " . $stmt->error;
 }
 
 $redirect_url = $site_url . '/';
