@@ -10,6 +10,30 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
+$secretKey = $_ENV['TURNSTILE_SECRET_KEY'];
+$token = $_POST['cf-turnstile-response'] ?? '';
+
+if (!$token) {
+    die("Captcha token missing.");
+}
+
+$data = [
+    'secret' => $secretKey,
+    'response' => $token,
+    'remoteip' => $_SERVER['REMOTE_ADDR']
+];
+
+$ch = curl_init("https://challenges.cloudflare.com/turnstile/v0/siteverify");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+$response = curl_exec($ch);
+curl_close($ch);
+
+$result = json_decode($response, true);
+
+if (!$result["success"]) {
+    die("Captcha verification failed.");
+}
 
 
 $full_name   = $_POST['full-name'] ?? '';
@@ -195,9 +219,9 @@ if ($stmt->execute()) {
     echo "Error inserting data: " . $stmt->error;
 }
 
-$redirect_url = $site_url . '/';
-header("Location: $redirect_url");
-exit;
+
+header("Location: $site_url");
+
 
 $stmt->close();
 $conn->close();
