@@ -34,6 +34,9 @@
             case "read-teacher":
                 require_once('backend/read-teacher.php');
                 break;
+            case "send-mail":
+                require_once('backend/send-mail.php');
+                break;
             default:
                 header("HTTP/1.1 404 Not Found");
                 echo "404 page not found";

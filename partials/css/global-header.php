@@ -101,86 +101,10 @@ body{
     opacity: 1;
     visibility: visible;
 }
-.mobile-menu-toggle{
-    display: none;
-}
-@media all and (max-width: 991px){
-    .mobile-menu-toggle{
-        display: block;
-    }
-    .main-header .navbar-nav a{
-        padding: 10px;
-    }
-    .main-header .mobile-menu-toggle{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-    }
-    .main-header .mobile-menu-toggle span{
-        display: block;
-        height: 2px;
-        background: #000;
-        width: 30px;
-        margin-bottom: 5px;
-    }
-    .main-header .dropdown-container{
-        opacity: 1;
-        visibility: visible;
-        position: relative;
-        border-top: none;
-        border: none;
-    }
-    .main-header .dropdown-container li a{
-        color: #000;
-    }
-    .main-header ul.navbar-nav{
-        position: absolute;
-        top: 84px;
-        right: 0;
-        width: 100vw;
-        background: #fff;
-        flex-direction: column;
-        border-top: 5px solid orange;
-        height: auto;
-        color: #000;
-        padding: 30px;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 20px;
-        border: 2px solid #eee;
-    }
-    .main-header ul.navbar-nav li a{
-        color: #000;
-    }
-    header.main-header.menu-close .navbar-nav {
-        display: none;
-    }
 
-    .mobile-menu-toggle .toggle-menu-close{
-        display: none;
-        color: #fff;
-    }
-    .mobile-menu-toggle .toggle-menu-open{
-        display: block;
-    }
-    .main-header .mobile-menu-toggle .toggle-menu-close{
-        display: block;
-        position: relative;
-        top: -10px;
-        font-size: 25px;
-    }
-    .main-header .mobile-menu-toggle .toggle-menu-open{
-        display: none;
-    }
-    .main-header.menu-close .mobile-menu-toggle .toggle-menu-close{
-        display: none;
-    }
-    
-    .main-header.menu-close .mobile-menu-toggle .toggle-menu-open{
-        display: block;
-    }
+@media all and (max-width: 991px){
+
+
     li.dropdown > a {
         background-color: rgba(0, 0, 0, .03);
         display: block;
@@ -211,5 +135,16 @@ body{
     }
     .main-header .logo-container{
         gap: 30px;
+    }
+}
+
+@media all and (max-width: 480px){
+    .main-header ul.navbar-nav li a{
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 350px){
+    .main-header ul.navbar-nav li a{
+        font-size: 12px;
     }
 }
