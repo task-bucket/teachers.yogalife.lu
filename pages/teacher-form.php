@@ -11,6 +11,22 @@
         <?php require_once('partials/css/global-critical.php') ?>
         <?php require_once('partials/css/global-header.php') ?>
         <?php require_once('partials/css/global-footer.php') ?>
+
+        .free-container,.paid-container{
+            display: none;
+            margin-top: 20px;
+        }
+        .free-container.show,.paid-container.show{
+            display: block;
+        }
+         .radio-group p{
+            font-size: 24px;
+         }
+        .radio-group label{
+            display: block;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
     </style>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
@@ -21,6 +37,22 @@
     <div class='row main-row'>
         <div class='col col-xs-12'>
             <h1>Please fill the form</h1>
+             
+                    
+       <div class="radio-group">
+        <p>Which Listing Type do you need?</p>
+          <label>
+            <input type="radio" name="listing" value="free">
+           Free
+          </label>
+
+          <label>
+            <input type="radio" name="listing" value="paid">
+            Paid
+          </label>
+        </div>
+    
+        <div class='free-container'>
             <form class='form' action='create-teacher' method='post' enctype="multipart/form-data">
             <input type='hidden' name='form-name' value='Teacher Form'>
                 <div class='row form-row'>
@@ -64,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                  <div class='row form-row'>
+                <div class='row form-row'>
                     <div class='col col-xs-12'>
                         <div class='form-group'>
                             <label for='teacher-description'>Description</label>
@@ -80,67 +112,7 @@
                         </div>
                     </div>
                 </div>
-                  <div class='row form-row'>
-                    <div class='col col-xs-12'>
-                        <div class='form-group'>
-                            <label for='teacher-image'>Which Listing type do you need?</label>
-                            <div class='form-inline-element'>
-                                <label><input name='listing-type' type='radio' value='free' required>Free</label>
-                                <label><input name='listing-type' type='radio' value='paid' required>Paid</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-         <!--        <div class="hide">
-                    <div class='row form-row'>
-                        <div class='col col-xs-12'>
-                            <div class='form-group'>
-                                <label for='yoga-style' class='required-mark'>Yoga style</label>
-                                <input id='yoga-style' name='yoga-style' type='text' placeholder='Yoga Style' required>
-                            </div>
-                        </div>
-                    </div>
-                      <div class='row form-row'>
-                        <div class='col col-xs-12'>
-                            <div class='form-group'>
-                                <label for='classes'>Classes</label>
-                                <textarea id='classes' name='classes' placeholder='Classes'></textarea>
-                            </div>
-                        </div>
-                    </div>
-                     <div class='row form-row'>
-                        <div class='col col-xs-12'>
-                            <div class='form-group'>
-                                <label for='workshops'>Workshops</label>
-                                <textarea id='workshops' name='workshops' placeholder='Workshops'></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row form-row'>
-                        <div class='col col-xs-12'>
-                            <div class='form-group'>
-                                <label for='retreats'>Retreats</label>
-                                <textarea id='retreats' name='retreats' placeholder='Retreats'></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row form-row'>
-                        <div class='col col-xs-12'>
-                            <div class='form-group'>
-                                <label for='corporate-yoga'>Corporate Yoga</label>
-                                <textarea id='corporate-yoga' name='corporate-yoga' placeholder='Corporate yoga'></textarea>
-                            </div>
-                        </div>
-                    </div>
-                     <div class='row form-row'>
-                        <div class='col col-xs-12'>
-                            <div class='form-group'>
-                                <label for='teacher-phone' class='required-mark'>Phone Number</label>
-                                <input id='teacher-phone' name='teacher-phone' type='text' placeholder='Phone Number' required>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+    
                 <div class='row form-row'>
                      <div class='col col-xs-12'>
                         <div class='form-group'>
@@ -151,6 +123,7 @@
                         </div>
                     </div>
                 </div>
+                 <input id='listing-type' name='listing-type' type='hidden' value='free'>
                <div class="cf-turnstile"
                     data-sitekey="<?php echo $_ENV['TURNSTILE_SITE_KEY']; ?>"
                     data-theme="light"
@@ -160,6 +133,48 @@
                     <button type='submit' class='btn btn-yellow'>Submit Application</button>
                 </div>
             </form>
+          </div>
+           <div class='paid-container'>
+            <form class='form' action='create-teacher' method='post' enctype="multipart/form-data">
+            <input type='hidden' name='form-name' value='Teacher Form'>
+                <div class='row form-row'>
+                    <div class='col col-xs-12'>
+                        <div class='form-group'>
+                            <label for='teacher-fname' class='required-mark'>Full Name</label>
+                            <input id='teacher-fname' name='full-name' type='text' placeholder='Your Full name' required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row form-row'>
+                    <div class='col col-xs-12'>
+                        <div class='form-group'>
+                            <label for='teacher-email' class='required-mark'>Email</label>
+                            <input id='teacher-email' name='email' type='email' placeholder='Your Email address' required>
+                        </div>
+                    </div>
+                </div>
+                 <div class='row form-row'>
+                     <div class='col col-xs-12'>
+                        <div class='form-group'>
+                            <label>Agree to our <a class ='yellow-link' href='https://yogalife.lu/terms-and-conditions' target='_blank'>Terms</a> ?<span class='required-mark'></span></label>
+                            <div class='form-inline-element'>
+                                <label><input name='terms-acceptance' type='radio' value='Yes' required> Yes</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <input id='listing-type' name='listing-type' type='hidden' value='paid'>
+               <div class="cf-turnstile"
+                    data-sitekey="<?php echo $_ENV['TURNSTILE_SITE_KEY']; ?>"
+                    data-theme="light"
+                    data-size="invisible">
+                </div>
+                <div class='form-group'>
+                    <button type='submit' class='btn btn-yellow'>Submit Application</button>
+                </div>
+            </form>
+          </div>
         </div>
     </div>
 </section>   
@@ -170,6 +185,26 @@
     </script>
     <script><?php require_once('partials/js/global-critical.php') ?>
             <?php require_once('partials/js/global-footer.php'); ?>
+    </script>
+    <script>
+    const radios = document.querySelectorAll('input[name="listing"]');
+    const targetDiv = document.querySelector('.free-container');
+     const targetDiv1 = document.querySelector('.paid-container');
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        if (this.value === 'free') {
+          targetDiv.classList.add('show');
+        } else {
+          targetDiv.classList.remove('show');
+        }
+         if (this.value === 'paid') {
+          targetDiv1.classList.add('show');
+        } else {
+          targetDiv1.classList.remove('show');
+        }
+      });
+    });
     </script>
 </body>
 </html>
