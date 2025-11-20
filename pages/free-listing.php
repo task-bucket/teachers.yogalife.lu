@@ -14,8 +14,8 @@
 
    
     </style>
-<!--     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
- -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 </head>
 <body>
     <?php require_once('partials/html/global-header.php'); ?>   
@@ -71,8 +71,8 @@
                 <div class='row form-row'>
                     <div class='col col-xs-12'>
                         <div class='form-group'>
-                            <label for='teacher-description'>Description</label>
-                            <textarea id='teacher-description' name='description' placeholder='Tell us about yourself'></textarea>
+                            <label for='teacher-description'>Description (max 350 characters)</label>
+                            <textarea id='teacher-description' name='description' placeholder='Tell us about yourself' required maxlength="350"></textarea>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <div class='col col-xs-12'>
                         <div class='form-group'>
                             <label for='teacher-image'>Upload Image</label>
-                            <input id='teacher-image' name='image' type='file' accept="image/*">
+                            <input id='teacher-image' name='image' type='file' accept="image/*" required>
                         </div>
                     </div>
                 </div>

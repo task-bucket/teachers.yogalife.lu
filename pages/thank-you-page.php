@@ -68,7 +68,7 @@
             <div class='col col-xs-12'>
                 <div class="thankyou-container">
                     <h1>Thank You!</h1>
-                    <p>Your application has been submitted!<br>We usually respond within 24 hours. In case you do not receive a response,  please contact <a class='brand-yellow' href="mailto:support@taskbucket.com">Support@taskbucket.com</a></p>
+                    <p>Your application has been submitted!<br>We usually respond within 24-48 hours. In case you do not receive a response,  please contact <a class='brand-yellow' href="mailto:support@taskbucket.com">support@taskbucket.com</a></p>
 
                     <a href="<?php echo $site_url?>" class="btn">Go Back to Listing Page</a>
                 </div>

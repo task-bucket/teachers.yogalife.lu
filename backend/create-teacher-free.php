@@ -1,8 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-
 
 require_once('libraries/phpmailer/vendor/autoload.php');
 
@@ -10,30 +6,30 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
-// $secretKey = $_ENV['TURNSTILE_SECRET_KEY'];
-// $token = $_POST['cf-turnstile-response'] ?? '';
+$secretKey = $_ENV['TURNSTILE_SECRET_KEY'];
+$token = $_POST['cf-turnstile-response'] ?? '';
 
-// if (!$token) {
-//     die("Captcha token missing.");
-// }
+if (!$token) {
+    die("Captcha token missing.");
+}
 
-// $data = [
-//     'secret' => $secretKey,
-//     'response' => $token,
-//     'remoteip' => $_SERVER['REMOTE_ADDR']
-// ];
+$data = [
+    'secret' => $secretKey,
+    'response' => $token,
+    'remoteip' => $_SERVER['REMOTE_ADDR']
+];
 
-// $ch = curl_init("https://challenges.cloudflare.com/turnstile/v0/siteverify");
-// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-// $response = curl_exec($ch);
-// curl_close($ch);
+$ch = curl_init("https://challenges.cloudflare.com/turnstile/v0/siteverify");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+$response = curl_exec($ch);
+curl_close($ch);
 
-// $result = json_decode($response, true);
+$result = json_decode($response, true);
 
-// if (!$result["success"]) {
-//     die("Captcha verification failed.");
-// }
+if (!$result["success"]) {
+    die("Captcha verification failed.");
+}
 
 
 $full_name   = $_POST['full-name'] ?? '';
@@ -42,7 +38,7 @@ $course      = $_POST['course'] ?? '';
 $email       = $_POST['email'] ?? '';
 $language    = $_POST['language'] ?? '';
 $description = $_POST['description'] ?? '';
-$listing_type = ($_POST['listing-type'] == 'free') ? 'free' : 'paid';
+$listing_type = 'free';
 $terms       = ($_POST['terms-acceptance'] === 'Yes') ? 1 : 0;
 
 
@@ -125,15 +121,14 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         if (move_uploaded_file($fileTmpPath, $destPath)) {
             resizeAndCropImage($destPath, $destPath, 400);
             $image_name = $newFileName;
-            echo "✅ Image resized and saved<br>";
         } else {
-            die("❌ Failed to move uploaded image file.");
+            die("Failed to move uploaded image file.");
         }
     } else {
-        die("❌ Invalid image type. Allowed: jpg, jpeg, png, gif, webp");
+        die("Invalid image type. Allowed: jpg, jpeg, png, gif, webp");
     }
 } else {
-    echo "ℹ️ No image uploaded<br>";
+    echo " No image uploaded<br>";
 }
 function createSlug($string) {
     $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $string)));
@@ -164,7 +159,7 @@ $stmt = $conn->prepare("INSERT INTO teacher_applications
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
 
 if (!$stmt) {
-    die("❌ Prepare failed: " . $conn->error);
+    die("Prepare failed: " . $conn->error);
 }
 
 $stmt->bind_param(
@@ -195,10 +190,11 @@ if ($stmt->execute()) {
         $mail->Port = $_ENV['MAIL_PORT'];
 
         $mail->setFrom($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
-        $mail->addAddress($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
+
+        $mail->addAddress('anurag42774@gmail.com', 'Anurag Harsh');
 
         $mail->isHTML(true);
-        $mail->Subject = '🧘 New Teacher Application Received';
+        $mail->Subject = 'New Teacher Application Received';
         $mail->Body = "
             <h2>New Teacher Application</h2>
             <p><strong>Name:</strong> {$full_name}</p>
@@ -212,7 +208,7 @@ if ($stmt->execute()) {
         $mail->send();
        
     } catch (Exception $e) {
-        echo "⚠️ Email failed: {$mail->ErrorInfo}<br>";
+        echo "Email failed: {$mail->ErrorInfo}<br>";
     }
     header("Location: $site_url/thank-you");
 

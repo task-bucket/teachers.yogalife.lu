@@ -14,6 +14,14 @@
         .hero-section{
             padding-bottom: 0;
         }
+        .hero-section p{
+            font-size:18px;
+            text-align:center;
+        }
+        .hero-section a{
+            font-size: 18px;
+            color:#04676B;
+         }
         h1{
             text-align: center;
         }
@@ -32,8 +40,7 @@
         .pricing-card{
             border: 1px solid #eee;
             background: #fff;
-            width: 30%;
-            max-width: 300px;
+            max-width: 320px;
             padding: 25px;   
             margin-right: 20px;
             border-radius: 30px;
@@ -49,6 +56,7 @@
             border: 6px solid var(--brand-yellow);
             border-top-width: 40px;
             position: relative;
+            max-width: 350px;
         }
         .price {
           font-weight: 700;
@@ -88,6 +96,10 @@
          .pricing-card li{
             font-size: 18px;
          }
+         .pricing-card li a{
+            font-size: 18px;
+            color:#04676B;
+         }
          .pricing-card.paid .features li{
             list-style: none;
          }
@@ -112,7 +124,8 @@
         <section class='section hero-section'>
             <div class='row main-row'>
                 <div class='col col-xs-12'>
-                    <h1>Select the Listing Type</h1>
+                    <h1>Select Listing Type</h1>
+                    <p>To create a listing on our website for increased visibility, please select one of the plans below. Or do you need a <strong>complete, custom website</strong> that reflects your brand? Our professional web development services can help. <strong>Starting at €750</strong> for a full 10-page site (e.g., Yoga studios). Contact <a href='https://taskbucket.com/contact'>TaskBucket Support</a> to begin.</p>
                 </div>
             </div>
         </section>
@@ -121,32 +134,36 @@
                 <div class="col col-xs-12">
                     <div class='pricing-container'>
                         <div class="pricing-card free">
-                            <h2>Starter</h2>
-                            <p class="subtitle">Ideal For Small Projects</p>
+                            <h2>Basic</h2>
+                            <p class="subtitle">Ideal for casual listing</p>
                             <div class="price"><p>Free</p></div>  
                             <div class="features">
-                                <ul><li>✓  &nbsp;Profile Basic Information</li></ul>
+                                <ul>
+                                    <li>✓  &nbsp;Basic information</li>
+                                    <li>✓  &nbsp;Free forever</li>
+                                </ul>
                             </div>
                             <a class='btn btn-blue' href="<?php echo $site_url; ?>/plans/free-listing">Get Started</a>
                                  
                         </div>
                          <div class="pricing-card paid">
                             <div class="inner-content">
-                                <p class="top">Most Popular Plan</p>
-                                <h2>Professional</h2>
-                                <p class="subtitle">For Freelancers and Projects</p>
+                                <p class="top">Most Popular</p>
+                                <h2>Advance</h2>
+                                <p class="subtitle">Ideal for serious listing</p>
                                 <div class="price"><p>
                                         <span class="currency">€</span class='rate'>50<span class="per"> /Year</span>
                                     </p>
                                 </div>
                                  <div class="features">
                                     <ul>
-                                        <li>✓  &nbsp;Separate Listing Page</li>
-                                        <li>✓  &nbsp;Separate Listing Page</li>
-                                        <li>✓  &nbsp;Separate Listing Page</li>
-                                        <li>✓  &nbsp;Separate Listing Page</li>
-                                        <li>✓  &nbsp;Separate Listing Page</li>
-                                        <li>✓  &nbsp;Separate Listing Page</li>
+                                        <li>✓  &nbsp;Full profile page</li>
+                                        <li>✓  &nbsp;Higher visibility in Google search</li>
+                                        <li>✓  &nbsp;Custom photos, reviews, etc.</li>
+                                        <li>✓  &nbsp;Custom form fields</li>
+                                        <li>✓  &nbsp;48-hour delivery time</li>
+                                        <li>✓  &nbsp;New edits @ €10/edit</li>
+                                        <li>✓  &nbsp;Check sample <a href='<?php echo $site_url; ?>/manoj-bhanot'>by clicking here</a></li>
                                     </ul>
                                 </div>
                                 <a class='btn btn-blue' href="<?php echo $site_url; ?>/plans/paid-listing">Get Started</a>
@@ -155,7 +172,7 @@
                     </div>
                 </div>
             </div>
-        </section>             
+        </section>           
     </div>                   
     <?php require_once('partials/html/global-footer.php'); ?>   
     
