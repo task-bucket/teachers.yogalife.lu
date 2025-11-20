@@ -139,6 +139,7 @@ p,ul,ol{
     padding:12px 15px;
     border-radius:5px;
     cursor:pointer;
+    border: none;
 }
 .btn-white{
     color:#333;

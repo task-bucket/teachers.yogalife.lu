@@ -18,6 +18,9 @@ $location = htmlspecialchars(trim($row['location']), ENT_QUOTES, 'UTF-8');
 $about = htmlspecialchars(trim($row['about']), ENT_QUOTES, 'UTF-8');
 $teaching_styles_long = htmlspecialchars(trim($row['teaching_styles_long']), ENT_QUOTES, 'UTF-8');
 $studio_address = htmlspecialchars(trim($row['studio_address']), ENT_QUOTES, 'UTF-8');
+$facebook = htmlspecialchars(trim($row['facebook']), ENT_QUOTES, 'UTF-8');
+$instagram = htmlspecialchars(trim($row['instagram']), ENT_QUOTES, 'UTF-8');
+$linkedin = htmlspecialchars(trim($row['linkedin']), ENT_QUOTES, 'UTF-8');
 $currentUrl = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 
@@ -40,8 +43,9 @@ $imageUrl = "$cdn_url/media/uploads/$image";
       <?php require_once('partials/css/global-header.php') ?>
         <?php require_once('partials/css/global-footer.php') ?>
         .hero-section{
-            background-image: url('<?php echo $cdn_url ?>/media/pages/teacher/student-class.webp');
-            height: 50vh;
+            background-image: url('<?php echo $cdn_url ?>/media/pages/teacher/student-class1.webp');
+            height: 60vh;
+            background-position-y: center;
         }
         .profile-image{
            margin-top: -100px;
@@ -140,36 +144,6 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         .icon-p img{
             margin-right: 5px;
         }
-        @media all and (max-width: 980px){
-            .profile-section .col{
-                justify-content: center;
-            }
-            .profile-image{
-                width: 200px;
-                height: 200px;
-            }
-            .profile-section .col{
-                margin: 0;
-            }
-            .hero-section{
-                height: 30vh;
-            }
-            .profile-section .col.empty-col{
-                display: none;
-            }
-            .profile-name h1{
-                font-size: 30px;
-            }
-        }
-
-        @media all and (max-width: 480px){
-            .btn-call{
-                font-size: 12px;
-            }
-             .profile-name h1{
-                font-size: 24px;
-            }
-        }
         .open-btn {
           background: #007bff;
           color: #fff;
@@ -256,6 +230,51 @@ $imageUrl = "$cdn_url/media/uploads/$image";
           width: 100%;
           font-size: 16px;
         }
+         @media all and (max-width: 980px){
+            .profile-section .col{
+                justify-content: center;
+            }
+            .profile-image{
+                width: 200px;
+                height: 200px;
+            }
+            .profile-section .col{
+                margin: 0;
+            }
+            .hero-section{
+                height: 30vh;
+            }
+            .profile-section .col.empty-col{
+                display: none;
+            }
+            .profile-name h1{
+                font-size: 30px;
+            }
+        }
+
+        @media all and (max-width: 480px){
+            .btn-call{
+                font-size: 12px;
+            }
+             .profile-name h1{
+                font-size: 24px;
+            }
+            .style.list-tab li{
+              display: block;
+              margin-bottom: 10px;
+            }
+        }
+        @media all and (max-width: 767px){
+          .profile-section .col{
+            width: 100%;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+          .reviews-container{
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
   </style>
 </head>
 <body>
@@ -278,9 +297,9 @@ $imageUrl = "$cdn_url/media/uploads/$image";
           <p class="icon-p"><span class="icon"><img src="<?php echo $cdn_url?>/media/icons/location-black.svg"></span>Brussels</p>
           <div class="social-media-container">
               <ul>
-                  <li class="list facebook"><a><img src="<?php echo $cdn_url?>/media/icons/facebook-white.svg"></a></li>
-                  <li class="list instagram"><a><img src="<?php echo $cdn_url?>/media/icons/instagram-white.svg"></a></li>
-                  <li><a class="list linkedin"><img src="<?php echo $cdn_url?>/media/icons/linkedin-white.svg"></a></li>
+                  <li class="list facebook"><a href="<?php echo $facebook ?>"><img src="<?php echo $cdn_url?>/media/icons/facebook-white.svg"></a></li>
+                  <li class="list instagram"><a href="<?php echo $instagram ?>"><img src="<?php echo $cdn_url?>/media/icons/instagram-white.svg"></a></li>
+                  <li class="list linkedin"><a href="<?php echo $linkedin ?>"><img src="<?php echo $cdn_url?>/media/icons/linkedin-white.svg"></a></li>
               </ul>
           </div>
         </div>
@@ -317,22 +336,14 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         <div class="style list-tab container">
            <h2>Teaching Styles & Focus</h2>
            <ul>
-             <li>Hatha Yoga</li>
-             <li>Hatha Yoga</li>
-             <li>Hatha Yoga</li>
-            </ul>
-            <ul>
-             <li>Hatha Yoga</li>
-             <li>Hatha Yoga</li>
+             <li>Yoga TTC</li>
+             <li>Yoga Nidra</li>
              <li>Hatha Yoga</li>
            </ul>         
         </div>
         <div class="training list-tab container">
            <h2>Training and Certifications</h2>
            <ul>
-             <li>Yoga Alliance Assitance</li>
-             <li>Yoga Alliance Assitance</li>
-             <li>Yoga Alliance Assitance</li>
              <li>Yoga Alliance Assitance</li>
            </ul>         
         </div>
