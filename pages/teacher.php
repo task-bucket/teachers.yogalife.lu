@@ -303,7 +303,7 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         </div>
         <div class="about container">
           <h2>Teaching Styles</h2>
-          <p>Shweta grew up in India, where yoga was part of her every-day life. She is the youngest of 5 children, of which 4 are yoga teachers. As such she has followed regular yoga courses, led by guru’s from all over India. As a young adult she was initiated into yoga by her Guru Swami Niranjanananda almost 15 years ago. In 2011 Shweta Bhanot completed her teachers training course (TTC) from Yogalife in the inspiring surroundings of Dharamsala. Since then she has been teaching classes in New Delhi and Belgium. Shweta has been a teacher at the Yogalife TTC since 2014. Shweta is an inspiration to many happy yogis, who are always glad to return to her uplifting classes. Shweta specializes in Hatha yoga,Yoga Nidra, Meditation..</p>
+          <p>Finally landing in his true roots as a Yogateacher, Manoj now teaches as an expert in human energy and chakras. Manoj’s profound understanding of Yoga Nidra, as a student of Bihar School of Yoga, created a one of a kind Nidra training in Belgium. Manoj is one of those rare teachers who can implement knowledge of ancient scriptures into practical everyday life. His natural ability to see people and connect with students through his honesty and sense of humour, makes him everyone’s favourite teacher and mentor.</p>
           
         </div>
         <div class="studio-address container">
