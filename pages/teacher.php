@@ -43,7 +43,7 @@ $imageUrl = "$cdn_url/media/uploads/$image";
       <?php require_once('partials/css/global-header.php') ?>
         <?php require_once('partials/css/global-footer.php') ?>
         .hero-section{
-            background-image: url('<?php echo $cdn_url ?>/media/pages/teacher/student-class1.webp');
+            background-image: url('<?php echo $cdn_url ?>/media/pages/teacher/student-class.webp');
             height: 60vh;
             background-position-y: center;
         }
@@ -329,7 +329,7 @@ $imageUrl = "$cdn_url/media/uploads/$image";
       <div class="col col-xs-12 col-lg-6">
         <div class="about container">
           <h2>About Me</h2>
-          <p><?php echo $description ?></p>
+          <p>To say that Manoj was driven and guided by the universe to teach yoga would not be an overstatement. However, that does not mean he took the shortcut on the path towards yoga teaching. The seed of yoga was planted very early on by being born into a yoga family, gaining insight into the scriptures, interacting with great teachers and renowned writers.</p>
 
         </div>
         <div class="about container">

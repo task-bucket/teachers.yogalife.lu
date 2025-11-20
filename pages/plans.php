@@ -20,6 +20,9 @@
         li{
             list-style: none;
         }
+       .main{
+            min-height: calc(90vh - 65px);
+        }
         .pricing-container{
             display: flex;
             justify-content: center;
@@ -29,52 +32,53 @@
         .pricing-card{
             border: 1px solid #eee;
             background: #fff;
-            width: 50%;
-            max-width: 400px;
-            text-align: center;
-            padding: 20px;   
+            width: 30%;
+            max-width: 300px;
+            padding: 25px;   
+            margin-right: 20px;
+            border-radius: 30px;
         }
-
-        .pricing-card.free{
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
+        .pricing-card h2{
+            font-size: 24px;
+            margin-bottom: 0;
         }
-
+        .pricing-card .subtitle{
+            color: #808080;
+        }
         .pricing-card.paid{
-            background: var(--brand-yellow);
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
+            border: 6px solid var(--brand-yellow);
+            border-top-width: 40px;
+            position: relative;
         }
         .price {
-          font-weight: 800;
-          color: var(--brand-yellow);
-          margin-bottom: 20px;
+          font-weight: 700;
         }
         .price p{
-            font-size: 72px;
-        }
-        .pricing-card.paid .price{
-            color: #fff;
+            font-size: 48px;
         }
         .price .currency {
           font-size: 32px;
           vertical-align: super;
-          color: #eee;
+
         }
 
         .price .per {
           font-size: 22px;
-          color: #eee;
         }
-        .features{
-            padding: 20px;
-            border:  1px solid #eee;
-        }
+      
         .features h2{
             color: var(--brand-alternate);
             font-size: 24px;
         }
-
+        .top{
+            text-align: center;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: -32px;
+            font-weight: 700;
+            color: #fff;
+        }
          .pricing-card a.btn{
             display: inline-flex;
             width: fit-content;
@@ -86,7 +90,6 @@
          }
          .pricing-card.paid .features li{
             list-style: none;
-            color:  #fff;
          }
          @media all and (max-width: 767px){
             .pricing-container{
@@ -94,8 +97,8 @@
                 align-items: center;
             }
             .pricing-card{
-                width: 100%;
-                border-radius: 8px;
+                width: 80%;
+                border-radius: 30px;
                 margin-bottom: 40px;
             }
          }
@@ -105,42 +108,56 @@
 </head>
 <body>
     <?php require_once('partials/html/global-header.php'); ?>   
-<section class='section hero-section'>
-    <div class='row main-row'>
-        <div class='col col-xs-12'>
-            <h1>Select the Listing Type</h1>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="row">
-        <div class="col col-xs-12">
-            <div class='pricing-container'>
-                <div class="pricing-card free">
-                    <div class="price"><p>Free</p></div>  
-                    <div class="features">
-                        <h2>Features</h2>
-                        <ul><li>✓ Profile Basic Information</li></ul>
-                    </div>
-                    <a class='btn btn-blue' href="<?php echo $site_url; ?>/plans/free-listing">Get Started</a>
-                         
-                </div>
-                 <div class="pricing-card paid">
-                    <div class="price"><p>
-                            <span class="currency">€</span class='rate'>50<span class="per"> /Year</span>
-                        </p>
-                    </div>
-                     <div class="features">
-                        <h2>Features</h2>
-                        <ul><li>✓ Separate Listing Page</li></ul>
-                    </div>
-                    <a class='btn btn-blue' href="<?php echo $site_url; ?>/plans/paid-listing">Get Started</a>
+    <div class="main">
+        <section class='section hero-section'>
+            <div class='row main-row'>
+                <div class='col col-xs-12'>
+                    <h1>Select the Listing Type</h1>
                 </div>
             </div>
-        </div>
-    </div>
-</section>                                    
-<?php require_once('partials/html/global-footer.php'); ?>   
+        </section>
+        <section class="section">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class='pricing-container'>
+                        <div class="pricing-card free">
+                            <h2>Starter</h2>
+                            <p class="subtitle">Ideal For Small Projects</p>
+                            <div class="price"><p>Free</p></div>  
+                            <div class="features">
+                                <ul><li>✓  &nbsp;Profile Basic Information</li></ul>
+                            </div>
+                            <a class='btn btn-blue' href="<?php echo $site_url; ?>/plans/free-listing">Get Started</a>
+                                 
+                        </div>
+                         <div class="pricing-card paid">
+                            <div class="inner-content">
+                                <p class="top">Most Popular Plan</p>
+                                <h2>Professional</h2>
+                                <p class="subtitle">For Freelancers and Projects</p>
+                                <div class="price"><p>
+                                        <span class="currency">€</span class='rate'>50<span class="per"> /Year</span>
+                                    </p>
+                                </div>
+                                 <div class="features">
+                                    <ul>
+                                        <li>✓  &nbsp;Separate Listing Page</li>
+                                        <li>✓  &nbsp;Separate Listing Page</li>
+                                        <li>✓  &nbsp;Separate Listing Page</li>
+                                        <li>✓  &nbsp;Separate Listing Page</li>
+                                        <li>✓  &nbsp;Separate Listing Page</li>
+                                        <li>✓  &nbsp;Separate Listing Page</li>
+                                    </ul>
+                                </div>
+                                <a class='btn btn-blue' href="<?php echo $site_url; ?>/plans/paid-listing">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>             
+    </div>                   
+    <?php require_once('partials/html/global-footer.php'); ?>   
     
 </body>
 </html> 
