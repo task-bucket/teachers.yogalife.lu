@@ -191,7 +191,7 @@ if ($stmt->execute()) {
 
         $mail->setFrom($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
 
-        $mail->addAddress('anurag42774@gmail.com', 'Anurag Harsh');
+        $mail->addAddress('support@taskbucket.com', 'TaskBucket Support');
 
         $mail->isHTML(true);
         $mail->Subject = 'New Free Listing on teachers.yogalife.lu';
