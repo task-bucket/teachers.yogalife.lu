@@ -109,8 +109,6 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         .reviews-container{
           display: inline-flex;
           align-items: center;
-          width: 49%;
-          border: 1px solid #eee;
           padding: 10px;
         }
         .reviews-container .left{
@@ -237,6 +235,33 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         .studio-address p img{
           margin-right: 10px;
         }
+        .outer-container {
+          display: flex;
+          align-items: center;
+        }
+
+        .testimonial-slider {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .slider-wrapper {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
+
+        .reviews-container {
+          min-width: 100%;
+          box-sizing: border-box;
+        }
+        .slider-btn{
+          background: #000;
+          color: #fff;
+          border: none;
+          padding: 5px 10px;
+          cursor: pointer;
+          z-index: 10;
+        }
          @media all and (max-width: 980px){
             .profile-section .col{
                 justify-content: center;
@@ -262,6 +287,7 @@ $imageUrl = "$cdn_url/media/uploads/$image";
               margin-top: 10px;
             }
         }
+        
 
         @media all and (max-width: 480px){
             .btn-call{
@@ -285,6 +311,13 @@ $imageUrl = "$cdn_url/media/uploads/$image";
           .reviews-container{
             width: 100%;
             margin-bottom: 10px;
+          }
+          .reviews-container{
+            flex-direction: column;
+          }
+          .review-image{
+            width: 100px;
+            height: 100px;
           }
         }
   </style>
@@ -364,35 +397,54 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         <div class="reviews container">
           <h2>Student Reviews</h2>
           <div class="outer-container">
-          <div class="reviews-container">
-            <div class="left">
-              <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/portrait-white.webp">
+            
+            <button class="slider-btn prev">&#10094;</button>
+
+            <div class="testimonial-slider">
+              <div class="slider-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="reviews-container">
+                  <div class="left">
+                    <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/portrait-white.webp" />
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">I learned a lot, the teachers are really inspiring and they really encourage you to take up teaching yoga yourself. I think back to Yogalife with a lot of warmth and gratefulness.</div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="reviews-container">
+                  <div class="left">
+                    <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/testimonial-image-2.webp">
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">Yogalife Belgium is a must-visit for anyone in Brussels! The team is fantastic—welcoming, passionate, and incredibly skilled. A class with Manoj is an absolute highlight; his calming presence and expert guidance make every session special.</div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="reviews-container">
+                  <div class="left">
+                     <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/testimonial-image-3.jpg">
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">Going through Yogalife Teacher Training Course has been a life changing experience. Coordinated by well-organized, professional and passionate group of people.</div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-            <div class="right">
-              <div class="review-star">★★★★★</div>
-              <div class='review-text'>I learned a lot, the teachers are really inspiring and they really encourage you to take up teaching yoga yourself. I think back to Yogalife with a lot of warmth and gratefulness.</div>
-            </div>
-          </div>
-          <div class="reviews-container">
-            <div class="left">
-              <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/testimonial-image-2.webp">
-            </div>
-            <div class="right">
-              <div class="review-star">★★★★★</div>
-              <div class='review-text'>Yogalife Belgium is a must-visit for anyone in Brussels! The team is fantastic—welcoming, passionate, and incredibly skilled. A class with Manoj is an absolute highlight; his calming presence and expert guidance make every session special.</div>
-            </div>
-          </div>
-          <div class="reviews-container">
-            <div class="left">
-              <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/testimonial-image-3.jpg">
-            </div>
-            <div class="right">
-              <div class="review-star">★★★★★</div>
-              <div class='review-text'>Going through Yogalife Teacher Training Course has been a life changing experience. Coordinated by well-organized, professional and passionate group of people.</div>
-            </div>
+
+            <button class="slider-btn next">&#10095;</button>
+
           </div>
         </div>
-        </div>
+
+
       </div>
     </div>
   </section>
@@ -453,6 +505,32 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         document.getElementById("closePopupBtn").click();
       }
     });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sliderWrapper = document.querySelector(".slider-wrapper");
+        const slides = document.querySelectorAll(".reviews-container");
+        const prev = document.querySelector(".slider-btn.prev");
+        const next = document.querySelector(".slider-btn.next");
+
+        let index = 0;
+
+        function updateSlider() {
+          sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        next.addEventListener("click", () => {
+          index = (index + 1) % slides.length;
+          updateSlider();
+        });
+
+        prev.addEventListener("click", () => {
+          index = (index - 1 + slides.length) % slides.length;
+          updateSlider();
+        });
+      });
+
+
     </script>
 </body>
 </html>
