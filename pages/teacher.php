@@ -342,9 +342,9 @@ $imageUrl = "$cdn_url/media/uploads/$image";
           <p class="icon-p"><span class="icon"><img src="<?php echo $cdn_url?>/media/icons/location-black.svg"></span>Brussels</p>
           <div class="social-media-container">
               <ul>
-                  <li class="list facebook"><a href="<?php echo $facebook ?>"><img src="<?php echo $cdn_url?>/media/icons/facebook-white.svg"></a></li>
-                  <li class="list instagram"><a href="<?php echo $instagram ?>"><img src="<?php echo $cdn_url?>/media/icons/instagram-white.svg"></a></li>
-                  <li class="list linkedin"><a href="<?php echo $linkedin ?>"><img src="<?php echo $cdn_url?>/media/icons/linkedin-white.svg"></a></li>
+                  <li class="list facebook"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/groups/189149714567631?_rdr"><img src="<?php echo $cdn_url?>/media/icons/facebook-white.svg"></a></li>
+                  <li class="list instagram"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.instagram.com/yogalifeinternational"><img src="<?php echo $cdn_url?>/media/icons/instagram-white.svg"></a></li>
+                  <li class="list twitter"><a target="_blank" rel="noopener noreferrer nofollow" href="https://x.com/YogalifeWorld"><img src="<?php echo $cdn_url?>/media/icons/twitter-white.svg"></a></li>
               </ul>
           </div>
         </div>
