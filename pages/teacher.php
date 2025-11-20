@@ -230,6 +230,13 @@ $imageUrl = "$cdn_url/media/uploads/$image";
           width: 100%;
           font-size: 16px;
         }
+        .studio-address p{
+          display: flex;
+          align-items: flex-start;
+        }
+        .studio-address p img{
+          margin-right: 10px;
+        }
          @media all and (max-width: 980px){
             .profile-section .col{
                 justify-content: center;
@@ -250,6 +257,10 @@ $imageUrl = "$cdn_url/media/uploads/$image";
             .profile-name h1{
                 font-size: 30px;
             }
+             .profile-section button{
+              font-size: 16px;
+              margin-top: 10px;
+            }
         }
 
         @media all and (max-width: 480px){
@@ -259,9 +270,10 @@ $imageUrl = "$cdn_url/media/uploads/$image";
              .profile-name h1{
                 font-size: 24px;
             }
-            .style.list-tab li{
+            .list-tab li,.style.list-tab li{
               display: block;
               margin-bottom: 10px;
+              width: 100%;
             }
         }
         @media all and (max-width: 767px){
@@ -326,8 +338,10 @@ $imageUrl = "$cdn_url/media/uploads/$image";
           
         </div>
         <div class="studio-address container">
-            <h2>Studio Address</h2>
-            <p>Yogalife Studio<br>
+            <h2>Contact Me</h2>
+            <p><img src="<?php echo $cdn_url?>/media/icons/mail-blue.svg">manoj@yogalife.org</p>
+            <p><img src="<?php echo $cdn_url?>/media/icons/phone-blue.svg">+32 493 811 813</p>
+            <p><img src="<?php echo $cdn_url?>/media/icons/location-blue.svg">Yogalife Studio<br>
             Rue du Houblon:Hopstraat 40<br>
             1000 Bruxelles/Brussel</p>
         </div>
@@ -356,25 +370,25 @@ $imageUrl = "$cdn_url/media/uploads/$image";
             </div>
             <div class="right">
               <div class="review-star">★★★★★</div>
-              <div class='review-text'>Over the years Yogalife has become much more than a yoga school for me, it’s a warm community</div>
+              <div class='review-text'>I learned a lot, the teachers are really inspiring and they really encourage you to take up teaching yoga yourself. I think back to Yogalife with a lot of warmth and gratefulness.</div>
             </div>
           </div>
           <div class="reviews-container">
             <div class="left">
-              <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/portrait-white.webp">
+              <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/testimonial-image-2.webp">
             </div>
             <div class="right">
               <div class="review-star">★★★★★</div>
-              <div class='review-text'>Over the years Yogalife has become much more than a yoga school for me, it’s a warm community</div>
+              <div class='review-text'>Yogalife Belgium is a must-visit for anyone in Brussels! The team is fantastic—welcoming, passionate, and incredibly skilled. A class with Manoj is an absolute highlight; his calming presence and expert guidance make every session special.</div>
             </div>
           </div>
           <div class="reviews-container">
             <div class="left">
-              <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/portrait-white.webp">
+              <img class="review-image" src="<?php echo $cdn_url?>/media/uploads/testimonial-image-3.jpg">
             </div>
             <div class="right">
               <div class="review-star">★★★★★</div>
-              <div class='review-text'>Over the years Yogalife has become much more than a yoga school for me, it’s a warm community</div>
+              <div class='review-text'>Going through Yogalife Teacher Training Course has been a life changing experience. Coordinated by well-organized, professional and passionate group of people.</div>
             </div>
           </div>
         </div>
