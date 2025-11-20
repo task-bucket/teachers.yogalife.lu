@@ -50,7 +50,7 @@
                 require_once('pages/paid-listing.php');
                 break;
              case "thank-you":
-                require_once('pages/thank-you-page.php');
+                require_once('pages/thank-you-free.php');
                 break;
             default:
                 header("HTTP/1.1 404 Not Found");

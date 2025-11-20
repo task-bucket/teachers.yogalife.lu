@@ -12,17 +12,17 @@
         <?php require_once('partials/css/global-header.php') ?>
         <?php require_once('partials/css/global-footer.php') ?>
 
-        h1{
+        .hero-section h1{
             text-align: center;
         }
-        p{
+        .hero-section p{
             text-align: center;
             font-size: 24px;
         }
-        a{
+        .hero-section a{
             font-size: 24px;
         }
-        a.btn{
+        .hero-section a.btn{
             font-size: 16px;
         }
         .main{
@@ -47,11 +47,11 @@
              .thankyou-container{
                 width: 100%;
             }
-            p{
+            .hero-section p{
                 text-align: center;
                 font-size: 18px;
             }
-            a{
+            .hero-section a{
                 font-size: 18px;
             }
         }
