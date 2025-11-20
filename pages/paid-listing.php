@@ -22,7 +22,7 @@
 <section class='section hero-section'>
     <div class='row main-row'>
         <div class='col col-xs-12'>
-            <h1>Please fill the form</h1>
+            <h1>Paid listing application</h1>
            <div class='paid-container'>
             <form class='form' action='<?php echo $site_url; ?>/create-teacher-paid' method='post' enctype="multipart/form-data">
             <input type='hidden' name='form-name' value='Teacher Form'>
@@ -34,7 +34,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class='row form-row'>
                     <div class='col col-xs-12'>
                         <div class='form-group'>

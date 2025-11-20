@@ -194,9 +194,9 @@ if ($stmt->execute()) {
         $mail->addAddress('anurag42774@gmail.com', 'Anurag Harsh');
 
         $mail->isHTML(true);
-        $mail->Subject = 'New Teacher Application Received';
+        $mail->Subject = 'New Free Listing on teachers.yogalife.lu';
         $mail->Body = "
-            <h2>New Teacher Application</h2>
+            <h2>New Free Listing</h2>
             <p><strong>Name:</strong> {$full_name}</p>
             <p><strong>Email:</strong> {$email}</p>
             <p><strong>Course:</strong> {$course}</p>

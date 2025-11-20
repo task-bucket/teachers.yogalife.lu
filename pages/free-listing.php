@@ -22,7 +22,7 @@
 <section class='section hero-section'>
     <div class='row main-row'>
         <div class='col col-xs-12'>
-            <h1>Please fill the form</h1>
+            <h1>Free listing form</h1>
              
         <div class='free-container'>
             <form class='form' action='<?php echo $site_url; ?>/create-teacher-free' method='post' enctype="multipart/form-data">
