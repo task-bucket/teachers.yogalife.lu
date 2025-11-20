@@ -17,18 +17,43 @@
         }
         p{
             text-align: center;
+            font-size: 24px;
+        }
+        a{
+            font-size: 24px;
+        }
+        a.btn{
+            font-size: 16px;
+        }
+        .main{
+            min-height: calc(90vh - 65px);
         }
         .thankyou-container{
-            background: var(--brand-yellow);
             width: 50%;
             padding: 20px;
             text-align: center;
             border-radius: 4px;
-            color: #fff;
+            color: #000;
+            font-size: 24px;
         }
         .main-row .col{
             display: flex;
             justify-content: center;
+        }
+        .brand-yellow{
+            color: var(--brand-yellow);
+        }
+        @media all and (max-width: 980px){
+             .thankyou-container{
+                width: 100%;
+            }
+            p{
+                text-align: center;
+                font-size: 18px;
+            }
+            a{
+                font-size: 18px;
+            }
         }
 
     </style>
@@ -36,20 +61,21 @@
  -->
 </head>
 <body>
-    <?php require_once('partials/html/global-header.php'); ?>   
-<section class='section hero-section'>
-    <div class='row main-row'>
-        <div class='col col-xs-12'>
-            <div class="thankyou-container">
-                <h1>Thank You!</h1>
-                <p>Your application has been submitted!<br> In case you do not receive a response, please contact <a href="mailto:shweta@yogalife.org";>shweta@yogalife.org</a></p>
+    <?php require_once('partials/html/global-header.php'); ?>
+    <div class="main">   
+    <section class='section hero-section'>
+        <div class='row main-row'>
+            <div class='col col-xs-12'>
+                <div class="thankyou-container">
+                    <h1>Thank You!</h1>
+                    <p>Your application has been submitted!<br>We usually respond within 24 hours. In case you do not receive a response,  please contact <a class='brand-yellow' href="mailto:support@taskbucket.com">Support@taskbucket.com</a></p>
 
-                <a href="/" class="btn">Go Back Home</a>
+                    <a href="<?php echo $site_url?>" class="btn">Go Back to Listing Page</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>   
-
+    </section>
+    </div>   
 <?php require_once('partials/html/global-footer.php'); ?>   
     <script>
         //Local Critical
