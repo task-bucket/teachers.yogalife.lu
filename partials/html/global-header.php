@@ -11,7 +11,7 @@
             <nav class="navbar">
                 <ul class="navbar-nav">
                     <li><a class="nav-link" href="<?php echo $site_url; ?>">View Listings</a></li>
-                    <li class="btn"><a class="nav-link btn btn-yellow" href="<?php echo $site_url; ?>/teacher-form">Submit Listing</a></li> 
+                    <li class="btn"><a class="nav-link btn btn-yellow" href="<?php echo $site_url; ?>/plans">Submit Listing</a></li> 
               </nav>
         </div>
     </div>

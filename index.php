@@ -28,6 +28,9 @@
             case "teacher-form":
                 require_once('pages/teacher-form.php');
                 break;
+            case "plans":
+                require_once('pages/plans.php');
+                break;
             case "create-teacher":
                 require_once('backend/create-teacher.php');
                 break;
@@ -36,6 +39,15 @@
                 break;
             case "send-mail":
                 require_once('backend/send-mail.php');
+                break;
+            case "plans/free-listing":
+                require_once('pages/free-listing.php');
+                break;
+             case "plans/paid-listing":
+                require_once('pages/paid-listing.php');
+                break;
+             case "thank-you":
+                require_once('pages/thank-you-page.php');
                 break;
             default:
                 header("HTTP/1.1 404 Not Found");

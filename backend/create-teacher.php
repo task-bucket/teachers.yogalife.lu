@@ -214,13 +214,14 @@ if ($stmt->execute()) {
     } catch (Exception $e) {
         echo "⚠️ Email failed: {$mail->ErrorInfo}<br>";
     }
+    header("Location: $site_url/thank-you");
 
 } else {
     echo "Error inserting data: " . $stmt->error;
 }
 
 
-header("Location: $site_url");
+// header("Location: $site_url");
 
 
 $stmt->close();
