@@ -31,8 +31,11 @@
             case "plans":
                 require_once('pages/plans.php');
                 break;
-            case "create-teacher":
-                require_once('backend/create-teacher.php');
+            case "create-teacher-free":
+                require_once('backend/create-teacher-free.php');
+                break;
+            case "create-teacher-paid":
+                require_once('backend/create-teacher-paid.php');
                 break;
             case "read-teacher":
                 require_once('backend/read-teacher.php');
