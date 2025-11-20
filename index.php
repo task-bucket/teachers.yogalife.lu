@@ -52,6 +52,9 @@
              case "thank-you-free":
                 require_once('pages/thank-you-free.php');
                 break;
+            case "thank-you-paid":
+                require_once('pages/thank-you-paid.php');
+                break;
             default:
                 header("HTTP/1.1 404 Not Found");
                 echo "404 page not found";
