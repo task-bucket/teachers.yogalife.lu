@@ -25,7 +25,7 @@
             <h1>Please fill the form</h1>
              
         <div class='free-container'>
-            <form class='form' action='<?php echo $site_url; ?>/create-teacher' method='post' enctype="multipart/form-data">
+            <form class='form' action='<?php echo $site_url; ?>/create-teacher-free' method='post' enctype="multipart/form-data">
             <input type='hidden' name='form-name' value='Teacher Form'>
                 <div class='row form-row'>
                     <div class='col col-xs-12'>
