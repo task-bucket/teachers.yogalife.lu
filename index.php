@@ -49,7 +49,7 @@
              case "plans/paid-listing":
                 require_once('pages/paid-listing.php');
                 break;
-             case "thank-you":
+             case "thank-you-free":
                 require_once('pages/thank-you-free.php');
                 break;
             default:

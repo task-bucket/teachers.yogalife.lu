@@ -26,7 +26,7 @@
             font-size: 16px;
         }
         .main{
-            min-height: calc(90vh - 65px);
+            min-height: calc(90vh - 58px);
         }
         .thankyou-container{
             width: 50%;
@@ -57,8 +57,6 @@
         }
 
     </style>
-<!--     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
- -->
 </head>
 <body>
     <?php require_once('partials/html/global-header.php'); ?>
@@ -68,8 +66,7 @@
             <div class='col col-xs-12'>
                 <div class="thankyou-container">
                     <h1>Thank You!</h1>
-                    <p>Your application has been submitted!<br>We usually respond within 24-48 hours. In case you do not receive a response,  please contact <a class='brand-yellow' href="mailto:support@taskbucket.com">support@taskbucket.com</a></p>
-
+                    <p>Your listing has been submitted!<br>We will review and get back to you within 24 hours on business days. In case you do not receive a response,  please check your Spam folder or contact <a class='brand-yellow' href="mailto:support@taskbucket.com">support@taskbucket.com</a></p>
                     <a href="<?php echo $site_url?>" class="btn">Go Back to Listing Page</a>
                 </div>
             </div>
