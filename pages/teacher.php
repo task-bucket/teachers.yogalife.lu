@@ -337,7 +337,7 @@ $imageUrl = "$cdn_url/media/uploads/$image";
         <div class="col col-xs-8 col-lg-3 col-2">
         <div class="profile-name">
           <h1><?php echo $fullName; ?></h1>
-          <p><strong><?php echo $course; ?></strong></p>
+          <p><strong>Teacher Training Expert</strong></p>
           <p>Language: <?php echo $language; ?></p>
           <p class="icon-p"><span class="icon"><img src="<?php echo $cdn_url?>/media/icons/location-black.svg"></span>Brussels</p>
           <div class="social-media-container">
