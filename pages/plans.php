@@ -14,14 +14,17 @@
         .hero-section{
             padding-bottom: 0;
         }
-        .hero-section p{
+        .custom-section{
+            padding-top:0;
+        }
+        .hero-section p,.custom-section p{
             font-size:18px;
             text-align:center;
         }
-        .hero-section a{
+        .hero-section a,.custom-section a{
             font-size: 18px;
             color:#04676B;
-         }
+        }
         h1{
             text-align: center;
         }
@@ -125,7 +128,7 @@
             <div class='row main-row'>
                 <div class='col col-xs-12'>
                     <h1>Select Listing Type</h1>
-                    <p>To create a listing on our website for increased visibility, please select one of the plans below. Or do you need a <strong>complete, custom website</strong> that reflects your brand? Our professional web development services can help. <strong>Starting at €750</strong> for a full 10-page site (e.g., Yoga studios). Contact <a href='https://taskbucket.com/contact'>TaskBucket Support</a> to begin.</p>
+                    <p>To create a listing on our website for increased visibility, please select one of the plans below.</p>
                 </div>
             </div>
         </section>
@@ -172,7 +175,14 @@
                     </div>
                 </div>
             </div>
-        </section>           
+        </section>    
+        <section class='section custom-section'>
+            <div class='row'>
+                <div class='col col-xs-12'>
+                    <p>Are you looking for a <strong>high-quality, custom website</strong> that truly represents your vision? We offer professional webisite builds (ideal for Yoga studios and similar ventures). <a href='https://taskbucket.com/contact'>Contact TaskBucket Support</a> today to discuss your project.</p>
+                </div>
+            </div>
+        </section>       
     </div>                   
     <?php require_once('partials/html/global-footer.php'); ?>   
     
