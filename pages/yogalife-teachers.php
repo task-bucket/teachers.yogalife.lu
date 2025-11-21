@@ -51,9 +51,9 @@
 		    border: 1px solid #eee;
 		    margin-right: 30px;
         border-radius: 4px;
-        overflow: hidden;
         display: inline-grid;
         	margin-bottom:30px;
+        position: relative;
 
 		}
 		.grid:nth-child(3n)
@@ -136,7 +136,25 @@
 			text-align: center;
 			margin: 40px 0;
 		}
-
+		.ribbon {
+		  font-size: 22px;
+		  font-weight: bold;
+		  color: #fff;
+		}
+		.ribbon {
+		  --f: .5em; /* control the folded part */
+		  position: absolute;
+		  left: 0;
+		  line-height: 1.8;
+		  padding-inline: 1lh;
+		  padding-bottom: var(--f);
+		  border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+		  clip-path: polygon(
+		    100% calc(100% - var(--f)),100% 100%,calc(100% - var(--f)) calc(100% - var(--f)),var(--f) calc(100% - var(--f)), 0 100%,0 calc(100% - var(--f)),999px calc(100% - var(--f) - 999px),calc(100% - 999px) calc(100% - var(--f) - 999px));
+		  transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
+		  transform-origin: 100% 100%;
+		  background-color: #F07818; /* the main color  */
+		}
 		<?php require_once('partials/css/global-footer.php') ?>
 	</style>
 </head>
@@ -169,6 +187,7 @@
 					        ?>
 
 					            <div class="grid">
+
 					                <div class="teacher-image">
 					                    <img src="<?php echo $imageUrl ?>" alt="<?php echo $row['full_name']; ?>" />
 					                </div>
@@ -248,8 +267,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 ? `<div class="btn-container"><a href="<?php echo $site_url ?>/${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a></div>`
                 : "";
 
+             const ribbon =
+              teacher.listing_type === "paid"
+                ? `<div class="ribbon">Featured</div>`
+                : "";   
             const html = `
               <div class="grid">
+              ${ribbon}
                 <div class="teacher-image">
                   <img src="${imageUrl}" alt="${teacher.full_name}" />
                 </div>
