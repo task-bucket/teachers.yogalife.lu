@@ -100,6 +100,9 @@
 			margin-top: 20px;
 			display: block;
 		}
+		#listing_results .col-lg-4:nth-child(3n) {
+    	margin-right: 0;
+		}
 		<?php require_once('partials/css/global-footer.php') ?>
 	</style>
 </head>
@@ -133,100 +136,79 @@
 <?php require_once('partials/html/global-footer.php'); ?>	
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("teacher-list");
-  const searchInput = document.getElementById("searchInput");
-  const paginationContainer = document.getElementById("pagination");
+    const container = document.getElementById("teacher-list");
+    const searchInput = document.getElementById("searchInput");
+    const cdnUrl = <?php echo json_encode($cdn_url); ?>;
 
-  let currentPage = 1;
-  const limit = 1;
+    function loadTeachers(search = "") {
+        // Removed page and limit parameters
+        const url = `backend/read-teacher.php?search=${encodeURIComponent(search)}`;
+        
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (!container) return;
+                container.innerHTML = "";
 
-  // Function to load teachers (with optional search term)
-  function loadTeachers(search = "", page = 1) {
-    fetch(`backend/read-teacher.php?search=${encodeURIComponent(search)}&page=${page}&limit=${limit}`)
-      .then((response) => response.json())
-      .then((data) => {
-        container.innerHTML = "";
+                if (data.status === "success" && data.data.length > 0) {
+                    data.data.forEach(teacher => {
+                        const imageUrl = teacher.image
+                            ? `public/media/uploads/${teacher.image}`
+                            : `public/media/uploads/default-image.png`;
 
-        if (data.status === "success" && data.data.length > 0) {
-          data.data.forEach((teacher) => {
-            const imageUrl = teacher.image
-              ? `public/media/uploads/${teacher.image}`
-              : `public/media/uploads/default-image.png`;
+                        const teacherSlug = teacher.full_name
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, "-")
+                            .replace(/(^-|-$)/g, "");
 
-            // ✅ Step 1: Generate slug from teacher name
-            const teacherSlug = teacher.full_name
-              .toLowerCase()
-              .replace(/[^a-z0-9]+/g, "-")
-              .replace(/(^-|-$)/g, "");
+                        const fullPageButton = teacher.listing_type === "paid"
+                            ? `<a href="pages/teacher.php?slug=${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a>`
+                            : "";
 
-            // ✅ Step 2: Add "Go Full Page" button only for paid listings
-            const fullPageButton =
-              teacher.listing_type === "paid"
-                ? `<a href="pages/teacher.php?slug=${teacherSlug}" class="btn btn-blue full-page-btn">View Full Profile</a>`
-                : "";
-
-            // ✅ Step 3: Build HTML card
-            const html = `
-              <div class="grid">
-                <div class="teacher-image">
-                  <img src="${imageUrl}" alt="${teacher.full_name}" />
-                </div>
-                <h2>${teacher.full_name}</h2>
-                <p class='location'>
-                  <img alt="location" src="<?php echo $cdn_url; ?>/media/icons/location-yellow.svg">
-                  ${teacher.address}
-                </p>
-                <p class='classes'>
-                  <img alt="Course" src="<?php echo $cdn_url; ?>/media/icons/course-yellow.svg">
-                  ${teacher.course}
-                </p>
-                <p class='email'>
-                  <img alt="mail" src="<?php echo $cdn_url; ?>/media/icons/mail-yellow.svg">
-                  ${teacher.email}
-                </p>
-                <p class='language'>
-                  <img alt="language" src="<?php echo $cdn_url; ?>/media/icons/language-yellow.svg">
-                  ${teacher.language}
-                </p>
-                <p class='description'>${teacher.description}</p>
-                ${fullPageButton}
-              </div>`;
-            
-            container.insertAdjacentHTML("beforeend", html);
-          });
-
-          renderPagination(data.total_pages, data.current_page, search);
-        } else {
-          container.innerHTML = "<p>No teachers found.</p>";
-          paginationContainer.innerHTML = "";
-        }
-      })
-      .catch((err) => console.error("AJAX Error:", err));
-  }
-
-  // Render pagination buttons
-  function renderPagination(totalPages, currentPage, search) {
-    paginationContainer.innerHTML = "";
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-      btn.className = i === currentPage ? "active" : "";
-      btn.addEventListener("click", () => {
-        loadTeachers(search, i);
-      });
-      paginationContainer.appendChild(btn);
+                        const html = `
+                            <div class="grid">
+                                <div class="teacher-image">
+                                    <img src="${imageUrl}" alt="${teacher.full_name}" />
+                                </div>
+                                <h2>${teacher.full_name}</h2>
+                                <p class='location'>
+                                    <img alt="location" src="${cdnUrl}/media/icons/location-yellow.svg">
+                                    ${teacher.address}
+                                </p>
+                                <p class='classes'>
+                                    <img alt="Course" src="${cdnUrl}/media/icons/course-yellow.svg">
+                                    ${teacher.course}
+                                </p>
+                                <p class='email'>
+                                    <img alt="mail" src="${cdnUrl}/media/icons/mail-yellow.svg">
+                                    ${teacher.email}
+                                </p>
+                                <p class='language'>
+                                    <img alt="language" src="${cdnUrl}/media/icons/language-yellow.svg">
+                                    ${teacher.language}
+                                </p>
+                                <p class='description'>${teacher.description}</p>
+                                ${fullPageButton}
+                            </div>`;
+                        
+                        container.insertAdjacentHTML("beforeend", html);
+                    });
+                } else {
+                    container.innerHTML = "<p>No teachers found.</p>";
+                }
+            })
+            .catch(err => console.error("AJAX Error:", err));
     }
-  }
 
-  // Initial load
-  loadTeachers();
+    // Initial load
+    loadTeachers();
 
-  // Search event
-  searchInput.addEventListener("keyup", function () {
-    const searchValue = searchInput.value.trim();
-    currentPage = 1;
-    loadTeachers(searchValue, currentPage);
-  });
+    // Search event
+    if(searchInput) {
+        searchInput.addEventListener("keyup", function () {
+            loadTeachers(this.value.trim());
+        });
+    }
 });
 </script>
 
