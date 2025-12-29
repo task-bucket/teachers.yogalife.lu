@@ -15,7 +15,7 @@
       <?php require_once('partials/css/global-footer.php') ?>
       <?php require_once('partials/css/full-listing.php') ?>
       .hero-section{
-            background-image: url(https://teachers.yogalife.lu/public/media/teachers/4/cover-image.webp);
+            background-image: url(https://teachers.yogalife.lu/public/media/teachers/1/cover-image.webp);
             height: 34vw;
             background-position-y: center;
             background-size: contain;
