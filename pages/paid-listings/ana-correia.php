@@ -164,9 +164,10 @@
                   <div class="right">
                     <div class="review-star">★★★★★</div>
                     <div class="review-text">
+                      <p>
                       Practicing yoga with Ana’s guidance is always one of the most positive moments of my day. Ana has a special ability to create a space of trust and connection. I find it to be the best environment for finding inner balance. I can only recommend Ana to anybody that wants to develop a practice beneficial for their life.
-                      <br><br>
-                      - Andra Fola
+                      <br><br>- Andra Fola</p>
+
                     </div>
                   </div>
                 </div>

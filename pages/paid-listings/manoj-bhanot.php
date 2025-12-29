@@ -116,7 +116,7 @@
                   </div>
                   <div class="right">
                     <div class="review-star">★★★★★</div>
-                    <div class="review-text">I learned a lot, the teachers are really inspiring and they really encourage you to take up teaching yoga yourself. I think back to Yogalife with a lot of warmth and gratefulness.</div>
+                    <div class="review-text"><p>I learned a lot, the teachers are really inspiring and they really encourage you to take up teaching yoga yourself. I think back to Yogalife with a lot of warmth and gratefulness.</p></div>
                   </div>
                 </div>
 
@@ -127,7 +127,7 @@
                   </div>
                   <div class="right">
                     <div class="review-star">★★★★★</div>
-                    <div class="review-text">Yogalife Belgium is a must-visit for anyone in Brussels! The team is fantastic—welcoming, passionate, and incredibly skilled. A class with Manoj is an absolute highlight; his calming presence and expert guidance make every session special.</div>
+                    <div class="review-text"><p>Yogalife Belgium is a must-visit for anyone in Brussels! The team is fantastic—welcoming, passionate, and incredibly skilled. A class with Manoj is an absolute highlight; his calming presence and expert guidance make every session special.</p></div>
                   </div>
                 </div>
 
@@ -138,7 +138,7 @@
                   </div>
                   <div class="right">
                     <div class="review-star">★★★★★</div>
-                    <div class="review-text">Going through Yogalife Teacher Training Course has been a life changing experience. Coordinated by well-organized, professional and passionate group of people.</div>
+                    <div class="review-text"><p>Going through Yogalife Teacher Training Course has been a life changing experience. Coordinated by well-organized, professional and passionate group of people.</p></div>
                   </div>
                 </div>
 
