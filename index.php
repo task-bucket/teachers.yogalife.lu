@@ -46,10 +46,14 @@
             case "thank-you-paid":
                 require_once('pages/thank-you-paid.php');
                 break;
+            case "mail-sent":
+                require_once('pages/mail-sent.php');
+                break;
+
+
             case "manoj-bhanot":
                 require_once('pages/paid-listings/manoj-bhanot.php');
                 break;
-
             case "ana-correia":
                 require_once('pages/paid-listings/ana-correia.php');
                 break;

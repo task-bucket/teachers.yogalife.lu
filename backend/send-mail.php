@@ -12,24 +12,22 @@ $email = $_POST['email'] ?? '';
 $phone = $_POST['phone'] ?? '';
 $message = $_POST['message'] ?? '';
 $email_send = $_POST['email-send'] ?? '';
-$url = $_POST['url'] ?? '';
 
 
 $stmt = $conn->prepare("INSERT INTO enquiry_form 
-(name, email, phone, message, url) 
-VALUES (?, ?, ?, ?, ?)");
+(name, email, phone, message) 
+VALUES (?, ?, ?, ?)");
 
 if (!$stmt) {
     die("❌ Prepare failed: " . $conn->error);
 }
 
 $stmt->bind_param(
-    "ssiss",
+    "ssis",
     $name,
     $email,
     $phone,
-    $message,
-    $url
+    $message
 );
 
 if ($stmt->execute()) {
@@ -71,7 +69,7 @@ if ($stmt->execute()) {
 
 
 // header("Location: " . $_SERVER['HTTP_REFERER']);
-header("Location: " . $url);
+header("Location: " . $site_url . '/mail-sent');
 $stmt->close();
 $conn->close();
 
