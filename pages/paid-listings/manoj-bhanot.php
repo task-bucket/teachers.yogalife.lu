@@ -169,7 +169,7 @@
             <label>Message</label>
             <textarea name='message' required></textarea>
           </div>
-          <div><input type="hidden" name="email-send" value="hemant.gaba21@gmail.com"></div>
+          <div><input type="hidden" name="email-send" value="manoj@yogalife.org"></div>
           <button type="submit" class="submit-btn">Submit</button>
         </form>
       </div>
