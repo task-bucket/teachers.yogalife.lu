@@ -25,7 +25,7 @@
    <?php require_once('partials/html/global-header.php'); ?>
    <section class="hero-section">
        
-   </section>
+   </section> 
   <section class="section profile-section">
     <div class="row">
       <div class="col col-xs-12 col-lg-3 col-1">
