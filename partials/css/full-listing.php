@@ -301,3 +301,7 @@ textarea {
 .location-text {
   line-height: 1.5;
 }
+.review-star {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
