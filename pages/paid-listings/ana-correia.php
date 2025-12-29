@@ -15,7 +15,7 @@
       <?php require_once('partials/css/global-footer.php') ?>
       <?php require_once('partials/css/full-listing.php') ?>
       .hero-section{
-            background-image: url('<?php echo $cdn_url ?>/media/pages/teacher/anna-corria.png');
+            background-image: url('<?php echo $cdn_url ?>/media/teachers/4/cover-image.webp');
             height: 60vh;
             background-position-y: center;
         }
@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col col-xs-12 col-lg-3 col-1">
         <div class="profile-image">
-          <img src="<?php echo $cdn_url ?>/media/uploads/ana-correia.jpg">
+          <img src="<?php echo $cdn_url ?>/media/teachers/4/profile-image.webp">
         </div>
       </div>
         <div class="col col-xs-8 col-lg-3 col-2">
