@@ -69,7 +69,7 @@ if ($stmt->execute()) {
 
 
 // header("Location: " . $_SERVER['HTTP_REFERER']);
-header("Location: " . $site_url . '/mail-sent');
+//header("Location: " . $site_url . '/mail-sent');
 $stmt->close();
 $conn->close();
 
