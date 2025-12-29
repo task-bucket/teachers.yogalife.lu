@@ -52,6 +52,9 @@
         .style{
           margin-bottom: 50px;
         }
+        .style li{
+          margin-bottom: 20px;
+        }
         .review-image{
           width: 50px;
           height: 50px;

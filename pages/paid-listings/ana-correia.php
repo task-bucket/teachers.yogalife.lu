@@ -91,16 +91,14 @@
 
         <p>
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
-          <strong>LUMI Studio</strong><br>
-          LUMI Studio – Holistic Movement<br>
+          <strong>LUMI Studio – Holistic Movement</strong><br>
           42 Rue Demy Schlechter<br>
           L-2521 Bouneweg-Süd Luxembourg
         </p>
 
         <p>
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
-          <strong>LUMI Studio</strong><br>
-          Crossfit Bear Crawl<br>
+          <strong>Crossfit Bear Crawl</strong><br>
           17 Op de Geieren<br>
           L-4970 Sprinkange ZAE Luxembourg
         </p>
