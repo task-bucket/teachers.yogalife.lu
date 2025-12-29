@@ -70,11 +70,19 @@
         </div>
        <div class="studio-address container">
             <h2>Contact Me</h2>
-            <p><img src="<?php echo $cdn_url?>/media/icons/mail-blue.svg">manoj@yogalife.org</p>
-            <p><img src="<?php echo $cdn_url?>/media/icons/phone-blue.svg">+32 493 811 813</p>
-            <p><img src="<?php echo $cdn_url?>/media/icons/location-blue.svg">Yogalife Studio<br>
-            Rue du Houblon:Hopstraat 40<br>
-            1000 Bruxelles/Brussel</p>
+            <ul>
+            <li><img src="<?php echo $cdn_url?>/media/icons/mail-blue.svg">manoj@yogalife.org</li>
+            <li><img src="<?php echo $cdn_url?>/media/icons/phone-blue.svg">+32 493 811 813</li>
+            <li class="location-item">
+              <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
+              <div class="location-text">
+                <strong>Yogalife Studio</strong><br>
+                <span class="address">
+                  Rue du Houblon:Hopstraat 40<br>
+                  1000 Bruxelles/Brussel
+                </span>
+              </div>
+            </li>
         </div>
       </div>
       <div class="col col-xs-12 col-lg-6">

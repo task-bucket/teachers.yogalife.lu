@@ -24,6 +24,8 @@
         .profile-section {
           margin-top:20px;
       }
+    
+
   </style>
 </head>
 <body>
@@ -83,31 +85,39 @@
 
       <div class="studio-address container">
         <h2>Contact Me</h2>
-
-        <p>
+        <ul>
+        <li>
           <img src="<?php echo $cdn_url; ?>/media/icons/mail-blue.svg" alt="Email">
           flyingirl1978@outlook.com
-        </p>
+        </li>
 
-        <p>
+        <li>
           <img src="<?php echo $cdn_url; ?>/media/icons/phone-blue.svg" alt="Phone">
           +352 661 625 859
-        </p>
+        </li>
 
-        <p>
+        <li class="location-item">
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
-          <strong>LUMI Studio – Holistic Movement</strong><br>
-          42 Rue Demy Schlechter<br>
-          L-2521 Bouneweg-Süd Luxembourg
-        </p>
+          <div class="location-text">
+            <strong>LUMI Studio – Holistic Movement</strong><br>
+            <span class="address">
+              42 Rue Demy Schlechter<br>
+              L-2521 Bouneweg-Süd Luxembourg
+            </span>
+          </div>
+        </li>
 
-        <p>
+       <li class="location-item">
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
-          <strong>Crossfit Bear Crawl</strong><br>
-          17 Op de Geieren<br>
-          L-4970 Sprinkange ZAE Luxembourg
-        </p>
-
+          <div class="location-text">
+            <strong>Crossfit Bear Crawl</strong><br>
+            <span class="address">
+              17 Op de Geieren<br>
+              L-4970 Sprinkange ZAE Luxembourg
+            </span>
+          </div>
+        </li>
+        </ul>
       </div>
 
     </div>
@@ -171,7 +181,7 @@
                   <div class="right">
                     <div class="review-star">★★★★★</div>
                     <div class="review-text">
-                        Come as you are. Leave better."
+                        <p>Come as you are. Leave better."
                         That's the last sentence of Ana's description of her evening yoga class in
                         the box, and for me, this proves absolutely true!
                         Even after a long, exhausting day, when all I want is to go home to bed and
@@ -185,7 +195,7 @@
                         a pleasant, calm voice, and helps to end the day well.
                         I think Ana does a good job with meeting people where they are, and
                         adapting her practice, and all of this with a smile on her face!
-                        <br><br>- Carmen Hollman
+                        <br><br>- Carmen Hollman</p>
                     </div>
                   </div>
                 </div>
@@ -200,8 +210,8 @@
                   <div class="right">
                     <div class="review-star">★★★★★</div>
                     <div class="review-text">
-                      Je suis les cours de Yin Yoga avec Ana. Ses cours de yoga sont devenus de vrais rendez-vous avec moi-même. Sa douceur et sa bienveillance créent immédiatement un espace rassurant où l’on se sent accueilli tel que l’on est. Elle prépare chaque séance avec beaucoup d’attention et veille toujours à ce que chacun puisse suivre à son rythme. Son sourire, sa présence chaleureuse et son approche positive font de chaque cours un moment précieux, à la fois apaisant et profondément ressourçant.
-                      <br><br>- Stephanie Engler
+                      <p>Je suis les cours de Yin Yoga avec Ana. Ses cours de yoga sont devenus de vrais rendez-vous avec moi-même. Sa douceur et sa bienveillance créent immédiatement un espace rassurant où l’on se sent accueilli tel que l’on est. Elle prépare chaque séance avec beaucoup d’attention et veille toujours à ce que chacun puisse suivre à son rythme. Son sourire, sa présence chaleureuse et son approche positive font de chaque cours un moment précieux, à la fois apaisant et profondément ressourçant.
+                      <br><br>- Stephanie Engler</p>
                   </div>
                 </div>
 
@@ -216,8 +226,8 @@
                   <div class="right">
                     <div class="review-star">★★★★★</div>
                     <div class="review-text">
-                      Celà fait maintenant un an que je pratique le yoga avec Ana. Dans ses cours, elle enseigne comment développer de la souplesse mentale et corporelle par des postures accordées à la respiration.  Avec les flows de postures qu’Ana crée, j’arrive à relâcher des tensions pour développer de la force et équilibrer mon énergie.
-                      <br><br>- Martine Bartems
+                      <p>Celà fait maintenant un an que je pratique le yoga avec Ana. Dans ses cours, elle enseigne comment développer de la souplesse mentale et corporelle par des postures accordées à la respiration.  Avec les flows de postures qu’Ana crée, j’arrive à relâcher des tensions pour développer de la force et équilibrer mon énergie.
+                      <br><br>- Martine Bartems</p>
                   </div>
                 </div>
 
