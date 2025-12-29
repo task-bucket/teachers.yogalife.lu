@@ -47,13 +47,13 @@
             text-align: center;
         }
         .training li{
-          margin-bottom: 20px;
+          margin-bottom: 12px;
         }
         .style{
           margin-bottom: 50px;
         }
         .style li{
-          margin-bottom: 20px;
+          margin-bottom: 12px;
         }
         .review-image{
           width: 50px;
