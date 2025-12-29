@@ -71,7 +71,7 @@ if ($stmt->execute()) {
 
 
 // header("Location: " . $_SERVER['HTTP_REFERER']);
-
+header("Location: " . $url);
 $stmt->close();
 $conn->close();
 
