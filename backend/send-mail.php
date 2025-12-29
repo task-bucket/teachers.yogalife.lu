@@ -38,13 +38,13 @@ if ($stmt->execute()) {
         $mail->isSMTP();
         $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = $email_send;
+        $mail->Username = $_ENV['MAIL_USER'];
         $mail->Password = $_ENV['MAIL_PASS'];
         $mail->SMTPSecure = 'tls';
         $mail->Port = $_ENV['MAIL_PORT'];
 
         $mail->setFrom($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
-        $mail->addAddress($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
+        $mail->addAddress($email_send);
 
         $mail->isHTML(true);
         $mail->Subject = 'New Teacher Application Received';
