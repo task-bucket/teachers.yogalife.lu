@@ -226,6 +226,7 @@ textarea {
 .reviews-container {
   min-width: 100%;
   box-sizing: border-box;
+      padding: 0 40px;
 }
 .slider-btn{
   background: #000;
