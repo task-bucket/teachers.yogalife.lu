@@ -72,14 +72,32 @@
       <div class="about container">
         <h2>About Me</h2>
         <p>
-          Meet Ana, a certified RYS 200 Yoga Instructor and RYS 60 Yoga Nidra facilitator. With a specialized background in CrossFit, Ana brings a unique perspective to the mat, blending high-intensity discipline with restorative mindfulness. Her classes are a dynamic fusion of strength, flexibility, and stillness, designed to help you find true balance in both body and mind. Whether you are a seasoned athlete or a complete beginner, Ana’s inclusive sessions are open to all levels. Embark on a journey of self-discovery and functional movement with a guide dedicated to your holistic growth.
+          Meet Ana, a certified RYS 200 Yoga Instructor and RYS 60 Yoga Nidra facilitator. With a specialized background in CrossFit, Ana brings a unique perspective to the mat, blending high-intensity discipline with restorative mindfulness. 
+          <br><br>
+          Her classes are a dynamic fusion of strength, flexibility, and stillness, designed to help you find true balance in both body and mind. "Come as you are, leave better" is her motto, and Ana's inclusive classes are open to all levels. 
+          <br><br>
+          Embark on a journey of self-discovery and functional movement with a guide dedicated to your holistic growth.
         </p>
       </div>
 
       <div class="about container">
         <h2>Teaching Styles</h2>
         <p>
-         Ana’s teaching philosophy is a masterful blend of physical vigor and meditative calm, uniquely shaped by her diverse expertise as an RYS 200 instructor and her rigorous background in CrossFit. She offers a holistic journey through four distinct styles, ensuring that every student finds their path to balance. In her Hatha Yoga sessions, Ana emphasizes structural alignment and steady breath, building a resilient foundation that honors the traditional roots of the practice. For those seeking a more rhythmic experience, her Vinyasa Flow classes create a seamless dance of movement and breath, fostering both cardiovascular health and mental focus.Her specialized Hybrid Yoga style represents the ultimate fusion of her worlds; it integrates functional strength and athletic mobility, making it an ideal choice for those who want to challenge their physical limits while maintaining a mindful connection. To balance this intensity, Ana utilizes her RYS 60 certification to lead Yoga Nidra, a profound practice of "yogic sleep" that facilitates deep nervous system recovery and self-discovery. Across all these modalities, Ana maintains a deep reverence for balance, creating a dynamic environment where strength, flexibility, and stillness coexist beautifully for practitioners of all levels.
+         Ana's teaching philosophy is a masterful blend of physical vigor and meditative calm, uniquely shaped by her diverse expertise as an RYS 200 instructor and her rigorous and varied background in CrossFit.
+          <br><br>
+          She offers a holistic journey through five distinctive styles, ensuring that every student finds their path to balance.
+            <br><br>
+          In her Hatha Yoga classes, Ana emphasizes structural alignment and steady breath, building a resilient foundation that honors the traditional roots of the practice.
+            <br><br>   
+          For those seeking a more rhythmic experience, her Vinyasa Flow classes create a seamless dance of movement and breath, fostering both cardiovascular health and mental focus.
+            <br><br>
+          Her specialized Hybrid Yoga program represents the ultimate fusion of her worlds; it integrates functional strength and athletic mobility, making it an ideal choice for those who want to challenge their physical limits while maintaining a mindful connection to body and breath.
+            <br><br>
+          To balance this intensity, Ana utilizes her RYS 60 certification to lead Yoga Nidra, a profound practice of "yogic sleep" that facilitates deep nervous system recovery and self-discovery.
+            <br><br>
+          Complementing this deep rest, Ana also guides Yin Yoga sessions that invite students into long-held, floor-based postures designed to gently stress and nourish the connective tissues. Through stillness, mindful breathing, and introspective awareness, her Yin classes cultivate patience, emotional release, and a profound sense of inner spaciousness.
+            <br><br>
+          Across all these modalities, Ana maintains a deep reverence for balance, creating a dynamic environment where strength, flexibility, and stillness coexist beautifully for practitioners of all levels.
         </p>
       </div>
 
@@ -133,6 +151,7 @@
           <li>Yoga Nidra</li>
           <li>Hybrid Yoga</li>
           <li>Vinyasa Flow</li>
+          <li>Yin Yoga</li>
         </ul>
       </div>
 
@@ -141,6 +160,7 @@
           <ul>
             <li>Yoga Alliance 200 hours certification</li>
             <li>Yoga Alliance 500-hour certification (ongoing)</li>
+            <li>CrossFit's Level 1 Certificate Course (ongoing)</li>
           </ul>
         </div>
 
