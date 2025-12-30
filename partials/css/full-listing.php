@@ -84,6 +84,7 @@ p,a,button,label,input,select,textarea,li{
   display: inline-flex;
   align-items: center;
   padding: 10px;
+  height: fit-content;
 }
 .reviews-container .left{
   margin-right: 10px;
@@ -209,6 +210,7 @@ textarea {
 .outer-container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .testimonial-slider {
@@ -232,7 +234,15 @@ textarea {
   padding: 5px 10px;
   cursor: pointer;
   z-index: 10;
+  position: absolute;
+  top: 100px;
 }
+button.slider-btn.prev{
+    left: 0;
+  }
+  button.slider-btn.next{
+    right: 0;
+  }
  @media all and (max-width: 980px){
     .profile-section .col{
         justify-content: center;
@@ -257,6 +267,7 @@ textarea {
       font-size: 16px;
       margin-top: 10px;
     }
+}
 }
 
 
