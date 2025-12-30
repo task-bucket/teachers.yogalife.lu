@@ -166,7 +166,7 @@
                                         <li>✓  &nbsp;Custom form fields</li>
                                         <li>✓  &nbsp;48-hour delivery time</li>
                                         <li>✓  &nbsp;New edits @ €10/edit</li>
-                                        <li>✓  &nbsp;Check sample <a href='<?php echo $site_url; ?>/manoj-bhanot'>by clicking here</a></li>
+                                        <li>✓  &nbsp;Check sample <a href='<?php echo $site_url; ?>/ana-correia'>by clicking here</a></li>
                                     </ul>
                                 </div>
                                 <a class='btn btn-blue' href="<?php echo $site_url; ?>/plans/paid-listing">Get Started</a>
