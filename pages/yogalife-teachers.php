@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+6<!DOCTYPE html>
 <html>
 <head>
 	<link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">
@@ -29,7 +29,7 @@
 		}*/
 		.hero-section .row{
 		    width: 90%;
-		    height: 100%;
+		    
 		    justify-content: center;
 		    align-items: center;
 		}
@@ -179,6 +179,7 @@
           <div id="teacher-list" class="grid-container">
 					        <?php
 					        $sql = "SELECT * FROM teacher_applications WHERE approved = 1";
+					        $sql .= " ORDER BY FIELD(listing_type, 'paid', 'free'), id ASC";
 					        $result = mysqli_query($conn, $sql);
 
 					        while ($row = mysqli_fetch_assoc($result)) {

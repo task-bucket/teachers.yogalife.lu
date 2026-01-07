@@ -49,13 +49,15 @@
             case "mail-sent":
                 require_once('pages/mail-sent.php');
                 break;
-
-
+          
             case "manoj-bhanot":
                 require_once('pages/paid-listings/manoj-bhanot.php');
                 break;
             case "ana-correia":
                 require_once('pages/paid-listings/ana-correia.php');
+                break;
+            case 'claudia-correia':
+                require_once('pages/paid-listings/claudia-correia.php');
                 break;
             default:
                 header("HTTP/1.1 404 Not Found");
