@@ -15,7 +15,7 @@
       <?php require_once('partials/css/global-footer.php') ?>
       <?php require_once('partials/css/full-listing.php') ?>
       .hero-section{
-            background-image: url(https://teachers.yogalife.lu/public/media/teachers/4/cover-image.webp);
+            background-image: url(<?php echo $cdn_url ?>/media/teachers/1/cover-image.webp);
             height: 34vw;
             background-position-y: center;
             background-size: contain;
@@ -37,7 +37,7 @@
     <div class="row">
       <div class="col col-xs-12 col-lg-3 col-1">
         <div class="profile-image">
-          <img src="<?php echo $cdn_url ?>/media/teachers/4/profile-image.webp">
+          <img src="<?php echo $cdn_url ?>/media/teachers/1/profile-image.webp">
         </div>
       </div>
         <div class="col col-xs-8 col-lg-3 col-2">
