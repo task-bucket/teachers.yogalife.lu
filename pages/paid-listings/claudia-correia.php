@@ -72,32 +72,18 @@
       <div class="about container">
         <h2>About Me</h2>
         <p>
-          Meet Ana, a certified RYS 200 Yoga Instructor and RYS 60 Yoga Nidra facilitator. With a specialized background in CrossFit, Ana brings a unique perspective to the mat, blending high-intensity discipline with restorative mindfulness. 
+          Hi, my name is Cláudia. For over a decade, I have dedicated my career to the social field, working as a specialized educator alongside complex family systems. This path led me to pursue advanced training in systemic therapy, which allowed me to deepen my understanding of human connection, behavioral patterns, and the intricate dynamics of relationships.
           <br><br>
-          Her classes are a dynamic fusion of strength, flexibility, and stillness, designed to help you find true balance in both body and mind. "Come as you are, leave better" is her motto, and Ana's inclusive classes are open to all levels. 
-          <br><br>
-          Embark on a journey of self-discovery and functional movement with a guide dedicated to your holistic growth.
+          Yoga entered my life as a vital anchor during my first pregnancy, providing a sense of balance I hadn’t found elsewhere. This personal passion evolved into a professional calling; last year, I completed my 200-hour Teacher Training (TTC). My commitment to growth continues this year as I sharpen my expertise through a 100-hour anatomy specialization with Yogalife. I believe that learning is a lifelong journey, and I am dedicated to bringing the most informed, compassionate version of myself to every session.
         </p>
       </div>
 
       <div class="about container">
         <h2>Teaching Styles</h2>
         <p>
-         Ana's teaching philosophy is a masterful blend of physical vigor and meditative calm, uniquely shaped by her diverse expertise as an RYS 200 instructor and her rigorous and varied background in CrossFit.
-          <br><br>
-          She offers a holistic journey through five distinctive styles, ensuring that every student finds their path to balance.
+         As a Hatha Yoga Teacher, I offer a unique, trauma-informed approach that seamlessly blends my background in social education with the transformative power of yoga. My classes are thoughtfully designed for individuals, children, and families, ensuring that practitioners of all ages feel seen and supported in a safe, inclusive environment.
             <br><br>
-          In her Hatha Yoga classes, Ana emphasizes structural alignment and steady breath, building a resilient foundation that honors the traditional roots of the practice.
-            <br><br>   
-          For those seeking a more rhythmic experience, her Vinyasa Flow classes create a seamless dance of movement and breath, fostering both cardiovascular health and mental focus.
-            <br><br>
-          Her specialized Hybrid Yoga program represents the ultimate fusion of her worlds; it integrates functional strength and athletic mobility, making it an ideal choice for those who want to challenge their physical limits while maintaining a mindful connection to body and breath.
-            <br><br>
-          To balance this intensity, Ana utilizes her RYS 60 certification to lead Yoga Nidra, a profound practice of "yogic sleep" that facilitates deep nervous system recovery and self-discovery.
-            <br><br>
-          Complementing this deep rest, Ana also guides Yin Yoga sessions that invite students into long-held, floor-based postures designed to gently stress and nourish the connective tissues. Through stillness, mindful breathing, and introspective awareness, her Yin classes cultivate patience, emotional release, and a profound sense of inner spaciousness.
-            <br><br>
-          Across all these modalities, Ana maintains a deep reverence for balance, creating a dynamic environment where strength, flexibility, and stillness coexist beautifully for practitioners of all levels.
+          My teaching emphasizes mindful connection, using the breath as a bridge to align the body and mind. By integrating my systemic therapy background, I help students explore their internal patterns and foster healthier relationships with themselves and others. Whether working with a single practitioner or an entire family unit, my ultimate goal is to nurture physical health and emotional well-being, fostering a deep sense of mindfulness that extends far beyond the yoga mat.
         </p>
       </div>
 
