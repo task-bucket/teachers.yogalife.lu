@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">  
-  <title>Yogalife Yoga Teachers in Luxembourg – Manoj Bhanot</title>
+  <title>Yogalife Yoga Teachers in Luxembourg – Claudia-correia</title>
   <meta name="description" content="Browse the complete directory of certified Yogalife yoga teachers in Luxembourg. View profiles, experience, specialties, training background, and teaching styles. Connect with trusted, experienced yoga instructors near you." />
   <?php require_once('partials/html/global-header-includes.php') ?>
   <meta charset="UTF-8">
@@ -15,7 +15,7 @@
       <?php require_once('partials/css/global-footer.php') ?>
       <?php require_once('partials/css/full-listing.php') ?>
       .hero-section{
-            background-image: url(<?php echo $cdn_url ?>/media/teachers/5/cover-image.webp);
+            background-image: url(<?php echo $cdn_url ?>/media/teachers/4/cover-image.webp);
             height: 34vw;
             background-position-y: center;
             background-size: cover;
@@ -37,7 +37,7 @@
     <div class="row">
       <div class="col col-xs-12 col-lg-3 col-1">
         <div class="profile-image">
-          <img src="<?php echo $cdn_url ?>/media/teachers/5/profile-image.webp">
+          <img src="<?php echo $cdn_url ?>/media/teachers/4/profile-image.webp">
         </div>
       </div>
         <div class="col col-xs-8 col-lg-3 col-2">

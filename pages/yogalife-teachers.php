@@ -1,4 +1,4 @@
-6<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">
