@@ -160,7 +160,7 @@
         <div class="training list-tab container">
           <h2>Training and Certifications</h2>
           <ul>
-            <li>Certificate Yoga Alliance 200h</li>
+            <li>Certificate Yoga Alliance 200H</li>
             <li>100H Anatomy (Ongoing)</li>
           </ul>
         </div>
