@@ -17,7 +17,6 @@
       .hero-section{
             background-image: url(<?php echo $cdn_url ?>/media/teachers/4/cover-image.webp);
             height: 34vw;
-            background-position-y: center;
             background-size: cover;
             background-repeat: no-repeat;
         }

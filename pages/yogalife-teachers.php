@@ -258,10 +258,12 @@ document.addEventListener("DOMContentLoaded", function () {
               ? `public/media/uploads/${teacher.image}`
               : `public/media/uploads/default-image.png`;
 
-            const teacherSlug = teacher.full_name
-              .toLowerCase()
-              .replace(/[^a-z0-9]+/g, "-")
-              .replace(/(^-|-$)/g, "");
+          const teacherSlug = teacher.full_name
+					  .normalize("NFD")                 
+					  .replace(/[\u0300-\u036f]/g, "")  
+					  .toLowerCase()
+					  .replace(/[^a-z0-9]+/g, "-")
+					  .replace(/(^-|-$)/g, "");
 
             const fullPageButton =
               teacher.listing_type === "paid"
