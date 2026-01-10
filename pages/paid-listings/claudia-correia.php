@@ -15,7 +15,7 @@
       <?php require_once('partials/css/global-footer.php') ?>
       <?php require_once('partials/css/full-listing.php') ?>
       .hero-section{
-            background-image: url(<?php echo $cdn_url ?>/media/teachers/4/cover-image.webp);
+            background-image: url(<?php echo $cdn_url ?>/media/teachers/4/cover-image-new.webp);
             height: 34vw;
             background-size: cover;
             background-repeat: no-repeat;
