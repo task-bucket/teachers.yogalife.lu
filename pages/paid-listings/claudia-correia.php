@@ -24,7 +24,22 @@
         .profile-section {
           margin-top:20px;
       }
-    
+      .profile-image{
+        width: auto;
+        height: auto;
+      }
+      @media all and (max-width:  767px){
+      .hero-section{
+        height: 50vw;}
+      }
+      .profile-image img {
+          width: 100%;
+          border-radius: 50%;
+          padding: 10px;
+          width: 300px;
+          height: 300px;
+          object-fit: cover;
+      }
 
   </style>
 </head>
@@ -48,7 +63,7 @@
           <p class="icon-p"><span class="icon"><img src="<?php echo $cdn_url?>/media/icons/location-black.svg"></span>Luxembourg</p>
           <div class="social-media-container">
               <ul>
-                  <li class="list facebook"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/share/1EKZMteHGD/"><img src="<?php echo $cdn_url?>/media/icons/facebook-white.svg"></a></li>
+                  <!-- <li class="list facebook"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/share/1EKZMteHGD/"><img src="<?php echo $cdn_url?>/media/icons/facebook-white.svg"></a></li> -->
                   <li class="list instagram"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.instagram.com/yogawithclaudia"><img src="<?php echo $cdn_url?>/media/icons/instagram-white.svg"></a></li>
                   <!-- <li class="list twitter"><a target="_blank" rel="noopener noreferrer nofollow" href="https://x.com/YogalifeWorld"><img src="<?php echo $cdn_url?>/media/icons/twitter-white.svg"></a></li> -->
               </ul>
@@ -72,7 +87,9 @@
       <div class="about container">
         <h2>About Me</h2>
         <p>
-          Hi, my name is Cláudia. For over a decade, I have dedicated my career to the social field, working as a specialized educator alongside complex family systems. This path led me to pursue advanced training in systemic therapy, which allowed me to deepen my understanding of human connection, behavioral patterns, and the intricate dynamics of relationships.
+          Hello, I'm Cláudia. My formative years were shaped by the grace and discipline of ballet, contemporary, and jazz dance at the Conservatoire du Luxembourg. Today, my journey with movement continues and I'm still guided by the lesson I learned about expressing the internal through the external.
+          <br><br>
+          For over a decade, I have dedicated my career to the social field, working as a specialized educator alongside complex family systems. This path led me to pursue advanced training in systemic therapy, which allowed me to deepen my understanding of human connection, behavioral patterns, and the intricate dynamics of relationships.
           <br><br>
           Yoga entered my life as a vital anchor during my first pregnancy, providing a sense of balance I hadn’t found elsewhere. This personal passion evolved into a professional calling; last year, I completed my 200-hour Teacher Training (TTC). My commitment to growth continues this year as I sharpen my expertise through a 100-hour anatomy specialization with Yogalife. I believe that learning is a lifelong journey, and I am dedicated to bringing the most informed, compassionate version of myself to every session.
         </p>
@@ -82,7 +99,7 @@
         <h2>Teaching Styles</h2>
         <p>
          As a Hatha Yoga Teacher, I offer a unique, trauma-informed approach that seamlessly blends my background in social education with the transformative power of yoga. My classes are thoughtfully designed for individuals, children, and families, ensuring that practitioners of all ages feel seen and supported in a safe, inclusive environment.
-            <br><br>
+          <br><br>
           My teaching emphasizes mindful connection, using the breath as a bridge to align the body and mind. By integrating my systemic therapy background, I help students explore their internal patterns and foster healthier relationships with themselves and others. Whether working with a single practitioner or an entire family unit, my ultimate goal is to nurture physical health and emotional well-being, fostering a deep sense of mindfulness that extends far beyond the yoga mat.
         </p>
       </div>
@@ -92,15 +109,15 @@
         <ul>
         <li>
           <img src="<?php echo $cdn_url; ?>/media/icons/mail-blue.svg" alt="Email">
-          flyingirl1978@outlook.com
+          c.alcouce@gmail.com
         </li>
 
         <li>
           <img src="<?php echo $cdn_url; ?>/media/icons/phone-blue.svg" alt="Phone">
-          +352 661 625 859
+          +352 621 703 556
         </li>
 
-        <li class="location-item">
+       <!--  <li class="location-item">
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
           <div class="location-text">
             <strong>LUMI Studio – Holistic Movement</strong><br>
@@ -120,7 +137,7 @@
               L-4970 Sprinkange ZAE Luxembourg
             </span>
           </div>
-        </li>
+        </li> -->
         </ul>
       </div>
 
@@ -134,22 +151,21 @@
         <h2>Teaching Styles & Focus</h2>
         <ul>
           <li>Hatha Yoga</li>
-          <li>Yoga Nidra</li>
-          <li>Hybrid Yoga</li>
-          <li>Vinyasa Flow</li>
+          <li>Vinyasa</li>
           <li>Yin Yoga</li>
+          <li>Parent–Child Yoga</li>
+          <li>Children & Youth Yoga</li>
         </ul>
       </div>
 
         <div class="training list-tab container">
           <h2>Training and Certifications</h2>
           <ul>
-            <li>Yoga Alliance 200 hours certification</li>
-            <li>Yoga Alliance 500-hour certification (ongoing)</li>
-            <li>CrossFit's Level 1 Certificate Course (ongoing)</li>
+            <li>Certificat yoga alliance 200h</li>
+            <li>And 100h anatomy ongoing</li>
           </ul>
         </div>
-
+<!-- 
         <div class="reviews container">
           <h2>Student Reviews</h2>
 
@@ -160,7 +176,6 @@
             <div class="testimonial-slider">
               <div class="slider-wrapper">
 
-                <!-- Review 1 -->
                 <div class="reviews-container">
                   <div class="left">
                     <img class="review-image"
@@ -178,7 +193,6 @@
                   </div>
                 </div>
 
-                <!-- Review 2 -->
                 <div class="reviews-container">
                   <div class="left">
                     <img class="review-image"
@@ -207,7 +221,6 @@
                   </div>
                 </div>
 
-                <!-- Review 3 -->
                 <div class="reviews-container">
                   <div class="left">
                     <img class="review-image"
@@ -223,7 +236,6 @@
                 </div>
 
               </div>
-              <!-- Review 4 -->
                 <div class="reviews-container">
                   <div class="left">
                     <img class="review-image"
@@ -244,7 +256,7 @@
             <button class="slider-btn next" aria-label="Next review">&#10095;</button>
         </div>
 
-      </div>
+      </div> -->
       <!-- END RIGHT COLUMN -->
 
     </div>
@@ -275,7 +287,7 @@
             <label>Message</label>
             <textarea name='message' required></textarea>
           </div>
-          <div><input type="hidden" name="email-send" value="flyingirl1978@outlook.com"></div>
+          <div><input type="hidden" name="email-send" value="c.alcouce@gmail.com"></div>
           <button type="submit" class="submit-btn">Submit</button>
         </form>
       </div>
