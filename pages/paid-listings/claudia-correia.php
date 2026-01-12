@@ -86,20 +86,20 @@
       <div class="about container">
         <h2>About Me</h2>
         <p>
-          Hello, I'm Cláudia. My formative years were shaped by the grace and discipline of ballet, contemporary, and jazz dance at the Conservatoire du Luxembourg. Today, my journey with movement continues and I'm still guided by the lesson I learned about expressing the internal through the external.
+          Cláudia’s formative years were shaped by the grace and discipline of ballet, contemporary, and jazz dance at the Conservatoire du Luxembourg. Today, her journey with movement continues, and she remains guided by the lesson she learned about expressing the internal through the external.
           <br><br>
-          For over a decade, I have dedicated my career to the social field, working as a specialized educator alongside complex family systems. This path led me to pursue advanced training in systemic therapy, which allowed me to deepen my understanding of human connection, behavioral patterns, and the intricate dynamics of relationships.
+          For over a decade, she has dedicated her career to the social field, working as a specialized educator alongside complex family systems. This path led her to pursue advanced training in systemic therapy, which allowed her to deepen her understanding of human connection, behavioral patterns, and the intricate dynamics of relationships.
           <br><br>
-          Yoga entered my life as a vital anchor during my first pregnancy, providing a sense of balance I hadn’t found elsewhere. This personal passion evolved into a professional calling; last year, I completed my 200-hour Teacher Training (TTC). My commitment to growth continues this year as I sharpen my expertise through a 100-hour anatomy specialization with Yogalife. I believe that learning is a lifelong journey, and I am dedicated to bringing the most informed, compassionate version of myself to every session.
+          Yoga entered Cláudia’s life as a vital anchor during her first pregnancy, providing a sense of balance she hadn’t found elsewhere. This personal passion evolved into a professional calling; last year, she completed her 200-hour Teacher Training (TTC). Her commitment to growth continues this year as she sharpens her expertise through a 100-hour anatomy specialization with Yogalife. She believes that learning is a lifelong journey and is dedicated to bringing the most informed, compassionate version of herself to every session.
         </p>
       </div>
 
       <div class="about container">
         <h2>Teaching Styles</h2>
         <p>
-         As a Hatha Yoga Teacher, I offer a unique, trauma-informed approach that seamlessly blends my background in social education with the transformative power of yoga. My classes are thoughtfully designed for individuals, children, and families, ensuring that practitioners of all ages feel seen and supported in a safe, inclusive environment.
+         As a Hatha Yoga Teacher, Cláudia offers a unique, trauma-informed approach that seamlessly blends her background in social education with the transformative power of yoga. Her classes are thoughtfully designed for individuals, children, and families, ensuring that practitioners of all ages feel seen and supported in a safe, inclusive environment.
           <br><br>
-          My teaching emphasizes mindful connection, using the breath as a bridge to align the body and mind. By integrating my systemic therapy background, I help students explore their internal patterns and foster healthier relationships with themselves and others. Whether working with a single practitioner or an entire family unit, my ultimate goal is to nurture physical health and emotional well-being, fostering a deep sense of mindfulness that extends far beyond the yoga mat.
+          Her teaching emphasizes mindful connection, using the breath as a bridge to align the body and mind. By integrating her systemic therapy background, she helps students explore their internal patterns and foster healthier relationships with themselves and others. Whether working with a single practitioner or an entire family unit, Cláudia’s ultimate goal is to nurture physical health and emotional well-being, fostering a deep sense of mindfulness that extends far beyond the yoga mat.
         </p>
       </div>
 
@@ -161,7 +161,7 @@
           <h2>Training and Certifications</h2>
           <ul>
             <li>Certificate Yoga Alliance 200H</li>
-            <li>100H Anatomy (Ongoing)</li>
+            <li>Advanced Teacher Training - Yoga Anatomy / Therapy 100H</li>
           </ul>
         </div>
 <!-- 
