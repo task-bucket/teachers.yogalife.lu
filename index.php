@@ -59,6 +59,9 @@
             case 'claudia-correia':
                 require_once('pages/paid-listings/claudia-correia.php');
                 break;
+            case 'thea-fenton':
+                require_once('pages/paid-listings/thea-fenton.php');
+                break;
             default:
                 header("HTTP/1.1 404 Not Found");
                 echo "404 page not found";

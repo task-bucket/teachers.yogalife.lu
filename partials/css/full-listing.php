@@ -284,6 +284,9 @@ button.slider-btn.prev{
       margin-bottom: 10px;
       width: 100%;
     }
+    .style.list-tab li{
+      width: 100%;
+    }
 }
 @media all and (max-width: 767px){
   .profile-section .col{
@@ -302,6 +305,9 @@ button.slider-btn.prev{
     width: 100px;
     height: 100px;
   }
+  .style.list-tab li{
+      width: 50%;
+    }
 }
 
 .location-item {
