@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">  
-  <title>Yogalife Yoga Teachers in Luxembourg – Manoj Bhanot</title>
+  <title>Yogalife Yoga Teachers in Luxembourg – Thea Fenton</title>
   <meta name="description" content="Browse the complete directory of certified Yogalife yoga teachers in Luxembourg. View profiles, experience, specialties, training background, and teaching styles. Connect with trusted, experienced yoga instructors near you." />
   <?php require_once('partials/html/global-header-includes.php') ?>
   <meta charset="UTF-8">
