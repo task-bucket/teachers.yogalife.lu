@@ -6,7 +6,6 @@
   <meta name="description" content="Browse the complete directory of certified Yogalife yoga teachers in Luxembourg. View profiles, experience, specialties, training background, and teaching styles. Connect with trusted, experienced yoga instructors near you." />
   <?php require_once('partials/html/global-header-includes.php') ?>
   <meta charset="UTF-8">
-  <title>Ana Correia - Yogalife</title>
   <link rel="stylesheet" href="style.css">
   <style>
       <?php require_once('partials/css/spark-grid.php') ?>
@@ -28,10 +27,7 @@
         width: auto;
         height: auto;
       }
-      @media all and (max-width:  767px){
-      .hero-section{
-        background-size: contain;}
-      }
+  
       .profile-image img {
           width: 100%;
           border-radius: 50%;
@@ -40,7 +36,15 @@
           height: 300px;
           object-fit: cover;
       }
-
+      @media all and (max-width:  767px){
+        .hero-section{
+          background-size: contain; 
+          height: 45vw;}
+          .profile-image img {
+            width: 200px;
+            height: 200px;
+          }
+      }
   </style>
 </head>
 <body>
