@@ -30,7 +30,7 @@
       }
       @media all and (max-width:  767px){
       .hero-section{
-        height: 50vw;}
+        background-size: contain;}
       }
       .profile-image img {
           width: 100%;
