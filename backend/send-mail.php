@@ -16,7 +16,7 @@ $sent_to = $_POST['sent-to'] ?? '';
 
 
 $stmt = $conn->prepare("INSERT INTO enquiry_form 
-(name, email, phone, message,sent_to) 
+(name, email, phone, message,url) 
 VALUES (?, ?, ?, ?, ?)");
 
 if (!$stmt) {
@@ -29,7 +29,7 @@ $stmt->bind_param(
     $email,
     $phone,
     $message,
-    $sent_to
+    $email_send
 );
 
 if ($stmt->execute()) {
