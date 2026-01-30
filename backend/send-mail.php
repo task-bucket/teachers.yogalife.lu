@@ -12,22 +12,24 @@ $email = $_POST['email'] ?? '';
 $phone = $_POST['phone'] ?? '';
 $message = $_POST['message'] ?? '';
 $email_send = $_POST['email-send'] ?? '';
+$sent_to = $_POST['sent-to'] ?? '';
 
 
 $stmt = $conn->prepare("INSERT INTO enquiry_form 
-(name, email, phone, message) 
-VALUES (?, ?, ?, ?)");
+(name, email, phone, message,sent_to) 
+VALUES (?, ?, ?, ?, ?)");
 
 if (!$stmt) {
     die("❌ Prepare failed: " . $conn->error);
 }
 
 $stmt->bind_param(
-    "ssis",
+    "ssiss",
     $name,
     $email,
     $phone,
-    $message
+    $message,
+    $sent_to
 );
 
 if ($stmt->execute()) {
