@@ -238,6 +238,7 @@
             <textarea name='message' required></textarea>
           </div>
           <div><input type="hidden" name="email-send" value="theohara.tatarova@gmail.com"></div>
+          <div><input type="hidden" name="sent-to" value="Thea Fenton"></div>
           <button type="submit" class="submit-btn">Submit</button>
         </form>
       </div>

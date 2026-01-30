@@ -177,6 +177,7 @@
             <textarea name='message' required></textarea>
           </div>
           <div><input type="hidden" name="email-send" value="manoj@yogalife.org"></div>
+          <div><input type="hidden" name="sent-to" value="Manoj Bhanot"></div>
           <button type="submit" class="submit-btn">Submit</button>
         </form>
       </div>
