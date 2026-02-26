@@ -90,6 +90,7 @@
 		}
 		.grid p > img{
 		  margin-right: 10px;
+		  width: 25px;
 		}
 		.teacher-image img{
 			 width:  100%;

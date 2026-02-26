@@ -56,6 +56,7 @@
 		}
 		.grid p > img{
 		  margin-right: 10px;
+		  width: 25px;
 		}
 		.teacher-image img{
 			 width:  100%;
@@ -99,6 +100,9 @@
 		.full-page-btn{
 			margin-top: 20px;
 			display: block;
+		}
+		.grid p > img{
+			width: 25px;
 		}
 		#listing_results .col-lg-4:nth-child(3n) {
     	margin-right: 0;
