@@ -13,6 +13,7 @@ body{
 }
 .main-header li{
     list-style: none;
+    margin-right: 20px;
 }
 
 .main-header .navbar-nav a{
