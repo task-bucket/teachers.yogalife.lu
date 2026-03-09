@@ -23,7 +23,11 @@
         .profile-section {
           margin-top:20px;
       }
-    
+      .link-url{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
 
   </style>
 </head>
@@ -116,14 +120,14 @@
         <li class="location-item">
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
           <div class="location-text">
-            <strong>LUMI Studio – Holistic Movement</strong><br>
+            <strong>Yoga am Minett (YAM)</strong><br>
             <span class="address">
-              42 Rue Demy Schlechter<br>
-              L-2521 Bouneweg-Süd Luxembourg
+              7 Rue de Schifflange<br>
+              L-4316 Esch-sur-Alzette Luxembourg
             </span>
           </div>
         </li>
-
+        <li><a class='link-url' href="https://www.naayya.com/teachers/ana" rel="noopener noreferrer nofollow" target="_blank"><img src="<?php echo $cdn_url; ?>/media/icons/link.svg" alt="link">View Profile</a></li>
        <li class="location-item">
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
           <div class="location-text">
