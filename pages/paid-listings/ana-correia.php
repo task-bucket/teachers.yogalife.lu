@@ -25,8 +25,11 @@
       }
       .link-url{
         display: flex;
-        gap: 10px;
+        gap: 7px;
         align-items: center;
+      }
+      .link-url img{
+        width: 20px;
       }
 
   </style>
@@ -125,9 +128,10 @@
               7 Rue de Schifflange<br>
               L-4316 Esch-sur-Alzette Luxembourg
             </span>
+            <a class='link-url' href="https://www.naayya.com/teachers/ana" rel="noopener noreferrer nofollow" target="_blank">View Profile<img src="<?php echo $cdn_url; ?>/media/icons/link.svg" alt="link"></a>
           </div>
         </li>
-        <li><a class='link-url' href="https://www.naayya.com/teachers/ana" rel="noopener noreferrer nofollow" target="_blank"><img src="<?php echo $cdn_url; ?>/media/icons/link.svg" alt="link">View Profile</a></li>
+ 
        <li class="location-item">
           <img src="<?php echo $cdn_url; ?>/media/icons/location-blue.svg" alt="Location">
           <div class="location-text">
