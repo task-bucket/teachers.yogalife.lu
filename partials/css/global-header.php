@@ -14,7 +14,7 @@ body{
 
 @media all and (max-width: 480px){
     body {
-        padding-top: 104px;
+        padding-top: 118px;
     }
 }
 .main-header li{
