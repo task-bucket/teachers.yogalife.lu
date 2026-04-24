@@ -11,6 +11,12 @@
 body{
     padding-top: 104px;
 }
+
+@media all and (max-width: 480px){
+    body {
+        padding-top: 104px;
+    }
+}
 .main-header li{
     list-style: none;
     margin-right: 20px;
