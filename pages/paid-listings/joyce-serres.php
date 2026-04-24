@@ -68,7 +68,7 @@
           <div class="social-media-container">
               <ul>
                  <!--  <li class="list facebook"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/share/1EKZMteHGD/"><img src="<?php echo $cdn_url?>/media/icons/facebook-white.svg"></a></li> -->
-                  <li class="list instagram"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.instagram.com/teohara/"><img src="<?php echo $cdn_url?>/media/icons/instagram-white.svg"></a></li>
+                  <li class="list instagram"><a target="_blank" rel="noopener noreferrer nofollow" href="https://instagram.com/joy_yoga_lux"><img src="<?php echo $cdn_url?>/media/icons/instagram-white.svg"></a></li>
                   <!-- <li class="list twitter"><a target="_blank" rel="noopener noreferrer nofollow" href="https://x.com/YogalifeWorld"><img src="<?php echo $cdn_url?>/media/icons/twitter-white.svg"></a></li> -->
               </ul>
           </div>
