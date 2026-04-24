@@ -62,6 +62,9 @@
             case 'thea-fenton':
                 require_once('pages/paid-listings/thea-fenton.php');
                 break;
+             case 'joyce-serres':
+                require_once('pages/paid-listings/joyce-serres.php');
+                break;
             default:
                 header("HTTP/1.1 404 Not Found");
                 echo "404 page not found";
