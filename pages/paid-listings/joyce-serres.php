@@ -214,7 +214,67 @@
                     </div>
                   </div>
                 </div>
-           
+
+                <div class="reviews-container">
+                  <div class="left">
+                    <img class="review-image" src="<?php echo $cdn_url; ?>/media/uploads/blank-profile.webp" alt="Student review">
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">
+                        <p>Joyce's classes are well structured. I like that she chooses a clear main focus, such as the seasons, and explains it thoughtfully. She integrates light, music, and essential oils, which immediately create a welcoming atmosphere. She offers alternatives and ensures that everyone feels comfortable and can practice without pressure. She speaks with a pleasant voice.
+                        <br><br>- Nathalie A.</p>
+                    </div>
+                  </div>
+                </div>
+                 <div class="reviews-container">
+                  <div class="left">
+                    <img class="review-image" src="<?php echo $cdn_url; ?>/media/uploads/blank-profile.webp" alt="Student review">
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">
+                        <p>For me, Joyce's classes are a time to disconnect from everyday life. She integrates elements of her own practice as well as inspirations from her travels, which makes each session unique. Her classes are thoughtfully designed, allowing everyone to choose the adaptation that suits them best. Her essential oils, her warmth, and her energy make her class something special, which is why I almost always take part.
+                        <br><br>- Carole G.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-container">
+                  <div class="left">
+                    <img class="review-image" src="<?php echo $cdn_url; ?>/media/uploads/blank-profile.webp" alt="Student review">
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">
+                        <p>A big thank you for your kind and caring teaching. Each class is unique, creative, and offers new discoveries, allowing us to progress without ever getting bored. The spiritual grounding, the intentions set at the beginning of each session, and the final meditation add a real sense of depth.
+                        <br><br>- Sonia D.S.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-container">
+                  <div class="left">
+                    <img class="review-image" src="<?php echo $cdn_url; ?>/media/uploads/blank-profile.webp" alt="Student review">
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">
+                        <p>A highly dedicated yoga teacher, open to suggestions and feedback. She takes into account the needs and wishes of her clients. The little extras make the classes even more appealing: essential oils, guest teachers, and sharing general knowledge about health. She is not intrusive, but empathetic.
+                        <br><br>- Nadia F.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-container">
+                  <div class="left">
+                    <img class="review-image" src="<?php echo $cdn_url; ?>/media/uploads/blank-profile.webp" alt="Student review">
+                  </div>
+                  <div class="right">
+                    <div class="review-star">★★★★★</div>
+                    <div class="review-text">
+                        <p>I feel very comfortable in your classes—it starts with the warm welcome. Everyone can come as they are; it's not about performance. It's about feeling your body and accepting yourself as you are. The pace isn't too fast, and the exercises (asanas) can be adapted to your own level of fitness. One simply feels good when one leaves your class.
+                        <br><br>- Josiane S.</p>
+                    </div>
+                  </div>
+                </div>
             </div>
               </div>
             <button class="slider-btn next" aria-label="Next review">&#10095;</button>
