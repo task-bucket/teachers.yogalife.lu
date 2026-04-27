@@ -91,11 +91,11 @@
       <div class="about container">
         <h2>About Me</h2>
         <p>
-        I’ve always been fascinated by the body’s endless possibilities for movement—its strength, adaptability, and subtle intelligence. Through my own active engagement in sports and movement practices (gymnastics, volleyball player, functional training, running, swimming and biking), my appreciation for functional strength: the kind that supports everyday life while allowing fluidity and ease, strength and softness. 
+        I am fascinated by the body’s endless possibilities for movement, its strength, adaptability, and subtle intelligence. Through my own active engagement in sports and movement practices I have come to appreciate the importance of functional strength immensely, the kind that supports everyday life while allowing fluidity and ease, strength, and softness.
           <br><br>
-         Yoga has been part of my life since my first pregnancy, and in the years that followed, I returned to it again and again. But it was during my teacher training in 2021/2022 with YogaLife that I truly dived deeper—exploring the 8 limbs of yoga and beginning to embody and live the practice beyond the mat. 
+         Yoga has been part of my life since my first pregnancy, and in the years that followed, I returned to it again and again. But it was during my teacher training in 2021/2022 with “YogaLife” that I truly dove deeper, exploring the 8 limbs of yoga and beginning to embody and live the practice beyond the mat.
           <br><br>
-          Since then, yoga has become part of my everyday life, offering me tools to navigate the challenges life throws at us, stay grounded, and meet life fully aware in all its moments.
+          Since then, yoga has become part of my everyday life, offering me tools to navigate the challenges life throws at us, stay grounded, and meet life fully aware.
         </p>
       </div>
 
@@ -104,9 +104,10 @@
         <p>
        Joyce Serres is a versatile yoga instructor and wellness practitioner with a vast repertoire of certifications. Her teaching is grounded in Hatha Yoga, Vinyasa, and Movement Education, balancing structural alignment with fluid motion. With advanced training in Pranayama and Yoga Nidra, she specializes in breathwork and deep conscious relaxation, complemented by the restorative stillness of Yin Yoga.
           <br><br>
-          Joyce’s expertise extends into specialized therapeutic care, including Prenatal Yoga and her role as a Yoga Menobalancing Coach, supporting women through critical life transitions and hormonal health. Her approach is further enriched by her background in Traditional Thai Yoga Massage, allowing her to integrate bodywork into her holistic sessions. Committed to technical precision, she is currently completing an advanced 100-hour Anatomy certification.
+          With over 20 years of experience as a primary school teacher, Joyce also works as a kids yoga teacher. Her approach combines education with mindful and playful movement, supporting children’s concentration, emotional balance, and body awareness in a holistic and engaging way.
             <br><br>
-          Whether guiding students through a dynamic flow or a meditative recovery, Joyce offers an anatomy-informed, compassionate practice dedicated to total physical and mental well-being.
+          Joyce’s expertise extends into specialized therapeutic care, including Prenatal Yoga and her role as a Menopause Coach, supporting women through critical life transitions and hormonal health. Her approach is further enriched by her background in Traditional Thai Yoga Massage, allowing her to integrate bodywork into her holistic sessions. Committed to technical precision, she is currently completing an advanced 100-hour Anatomy certification to further advance her understanding of the precision of movement and the body’s limits and potential.
+          <br><br>Whether guiding students through a dynamic flow or a meditative recovery, Joyce offers an anatomy-informed, compassionate practice dedicated to total physical and mental well-being.
         </p>
       </div>
 
