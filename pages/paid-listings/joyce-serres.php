@@ -62,7 +62,7 @@
         <div class="col col-xs-8 col-lg-3 col-2">
         <div class="profile-name">
           <h1>Joyce Serres</h1>
-          <p><strong>Hatha and Yin YogaTeacher</strong></p>
+          <p><strong>Hatha and Yin Yoga Teacher</strong></p>
           <p>English, French, Luxemburgish and German</p>
           <p class="icon-p"><span class="icon"><img src="<?php echo $cdn_url?>/media/icons/location-black.svg"></span>Luxembourg, online</p>
           <div class="social-media-container">
@@ -148,7 +148,7 @@
         <h2>Teaching Styles & Focus</h2>
         <ul>
           <li>Hatha Yoga</li>
-          <li>Yin Yang Yoga</li>
+          <li>Kids Yoga</li>
           <li>Vinyasa Yoga</li>
           <li>Yin Yoga</li>
           <li>Yoga Nidra</li>
