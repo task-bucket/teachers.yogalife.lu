@@ -5,7 +5,8 @@
     <?php require_once('partials/html/global-header-includes.php') ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yogalife Teacehers</title>
+    <title>Yogalife Teachers - Paid listing</title>
+      <meta name="description" content="Elevate your presence with our Paid Listing. Gain professional authority, advanced SEO optimization, and premium features designed to attract more students to your classes." />
     <style>
         <?php require_once('partials/css/spark-grid.php') ?>
         <?php require_once('partials/css/global-critical.php') ?>

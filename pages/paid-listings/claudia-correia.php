@@ -3,7 +3,7 @@
 <head>
   <link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">  
   <title>Yogalife Yoga Teachers in Luxembourg – Claudia Correia</title>
-  <meta name="description" content="Browse the complete directory of certified Yogalife yoga teachers in Luxembourg. View profiles, experience, specialties, training background, and teaching styles. Connect with trusted, experienced yoga instructors near you." />
+  <meta name="description" content="Explore Claudia Correia’s teaching philosophy at Yogalife. Join her sessions for a balanced blend of Hatha and Vinyasa, focused on mindful alignment and inner wellness." />
   <?php require_once('partials/html/global-header-includes.php') ?>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
