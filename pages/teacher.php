@@ -35,7 +35,6 @@ $imageUrl = "$cdn_url/media/uploads/$image";
   <meta name="description" content="Browse the complete directory of certified Yogalife yoga teachers in Luxembourg. View profiles, experience, specialties, training background, and teaching styles. Connect with trusted, experienced yoga instructors near you." />
   <?php require_once('partials/html/global-header-includes.php') ?>
   <meta charset="UTF-8">
-  <title><?= htmlspecialchars($teacher['full_name']) ?> - Yogalife</title>
   <link rel="stylesheet" href="style.css">
   <style>
       <?php require_once('partials/css/spark-grid.php') ?>

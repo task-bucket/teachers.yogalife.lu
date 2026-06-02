@@ -5,7 +5,8 @@
     <?php require_once('partials/html/global-header-includes.php') ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yogalife Teacehers</title>
+    <title>Yogalife Teachers - Plans</title>
+    <meta name='description' content='Choose your Yogalife plan: The Basic tier offers a free, simple listing, while the Advance plan for €50/year provides a full profile, enhanced SEO, and custom features.' /> 
     <style>
         <?php require_once('partials/css/spark-grid.php') ?>
         <?php require_once('partials/css/global-critical.php') ?>

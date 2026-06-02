@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <link rel="icon" type="image/x-icon" href="<?php echo $cdn_url; ?>/favicon.ico">  
-  <title>Yogalife Yoga Teachers in Luxembourg – Thea Fenton</title>
-  <meta name="description" content="Browse the complete directory of certified Yogalife yoga teachers in Luxembourg. View profiles, experience, specialties, training background, and teaching styles. Connect with trusted, experienced yoga instructors near you." />
+  <title>Yogalife Yoga Teachers in Luxembourg – Joyce Serres</title>
+  <meta name="description" content="Discover Joyce Serres, a versatile Yoga instructor at Yogalife specializing in Hatha, Vinyasa, Yin, and Prenatal Yoga, focused on anatomy-informed, compassionate practice." />
   <?php require_once('partials/html/global-header-includes.php') ?>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">

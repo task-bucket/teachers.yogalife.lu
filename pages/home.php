@@ -5,7 +5,7 @@
 	<?php require_once('partials/html/global-header-includes.php') ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Yogalife Teacehers</title>
+	<title>Yogalife Teachers</title>
 	<style>
 		<?php require_once('partials/css/spark-grid.php') ?>
 		<?php require_once('partials/css/global-critical.php') ?>
