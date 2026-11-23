@@ -2,9 +2,9 @@
 
 require_once('libraries/phpmailer/vendor/autoload.php');
 
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 
 $secretKey = $_ENV['TURNSTILE_SECRET_KEY'];
 $token = $_POST['cf-turnstile-response'] ?? '';
@@ -31,10 +31,33 @@ if (!$result["success"]) {
     die("Captcha verification failed.");
 }
 
+$listing_type = $_POST['listing-type'] ?? '';
+$full_name    = $_POST['full-name'] ?? '';
+$email        = $_POST['email'] ?? '';
+$whatsapp     = $_POST['teacher-whatsapp-number'] ?? '';
 
-$full_name   = $_POST['full-name'] ?? '';
-$email       = $_POST['email'] ?? '';
+// ---- SAVE TO DATABASE ---- //
+$stmt = $conn->prepare("INSERT INTO teacher_applications 
+    (full_name, email, listing_type, whatsapp_number) 
+    VALUES (?, ?, ?, ?)");
 
+if (!$stmt) {
+    die("❌ Prepare failed: " . $conn->error);
+}
+
+$stmt->bind_param(
+    "ssss",
+    $full_name,
+    $email,
+    $listing_type,
+    $whatsapp
+);
+
+if (!$stmt->execute()) {
+    die("❌ Execute failed: " . $stmt->error);
+}
+
+$stmt->close();
 
 // ---- SEND EMAIL ---- //
 $mail = new PHPMailer(true);
@@ -48,20 +71,22 @@ try {
     $mail->Port = $_ENV['MAIL_PORT'];
 
     $mail->setFrom($_ENV['MAIL_USER'], 'YogaLife Luxembourg');
-
     $mail->addAddress('support@taskbucket.com', 'TaskBucket Support');
 
     $mail->isHTML(true);
     $mail->Subject = 'New Paid Listing on teachers.yogalife.lu';
     $mail->Body = "
         <h2>New Paid Listing</h2>
-        <p><strong>Name:</strong> {$full_name}</p>
-        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Name:</strong> " . htmlspecialchars($full_name) . "</p>
+        <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
+        <p><strong>Listing Type:</strong> " . htmlspecialchars($listing_type) . "</p>
+        <p><strong>WhatsApp:</strong> " . htmlspecialchars($whatsapp) . "</p>
     ";
 
     $mail->send();
-   
 } catch (Exception $e) {
-    echo "Email failed: {$mail->ErrorInfo}<br>";
+    error_log("Email failed: {$mail->ErrorInfo}");
 }
+
 header("Location: $site_url/thank-you-paid");
+exit();
