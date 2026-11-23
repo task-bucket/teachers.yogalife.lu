@@ -7,12 +7,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $secretKey = $_ENV['TURNSTILE_SECRET_KEY'];
-$token = $_POST['cf-turnstile-response'] ?? '';
+$token = $_POST['turnstile-token'] ?? '';
 
 if (!$token) {
     die("Captcha token missing.");
 }
-
 $data = [
     'secret' => $secretKey,
     'response' => $token,
@@ -36,7 +35,6 @@ $full_name    = $_POST['full-name'] ?? '';
 $email        = $_POST['email'] ?? '';
 $whatsapp     = $_POST['teacher-whatsapp-number'] ?? '';
 
-// ---- SAVE TO DATABASE ---- //
 $stmt = $conn->prepare("INSERT INTO teacher_applications 
     (full_name, email, listing_type, whatsapp_number) 
     VALUES (?, ?, ?, ?)");
