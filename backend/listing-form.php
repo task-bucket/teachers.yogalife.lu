@@ -2,45 +2,62 @@
 
 require_once('libraries/phpmailer/vendor/autoload.php');
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$secretKey = $_ENV['TURNSTILE_SECRET_KEY'];
-$token = $_POST['turnstile-token'] ?? '';
+$rawJson = file_get_contents("php://input");
+$data = json_decode($rawJson, true);
 
-if (!$token) {
+if (!is_array($data)) {
+    http_response_code(400);
+    die("Invalid JSON payload.");
+}
+
+$secretKey = $_ENV['TURNSTILE_SECRET_KEY'];
+$token = trim($data['turnstile-token'] ?? '');
+
+if ($token === '') {
+    http_response_code(400);
     die("Captcha token missing.");
 }
-$data = [
-    'secret' => $secretKey,
+
+$turnstileData = [
+    'secret'   => $secretKey,
     'response' => $token,
     'remoteip' => $_SERVER['REMOTE_ADDR']
 ];
 
 $ch = curl_init("https://challenges.cloudflare.com/turnstile/v0/siteverify");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $turnstileData);
 $response = curl_exec($ch);
-curl_close($ch);
 
 $result = json_decode($response, true);
 
-if (!$result["success"]) {
+if (empty($result["success"])) {
+    http_response_code(403);
     die("Captcha verification failed.");
 }
 
-$listing_type = $_POST['listing-type'] ?? '';
-$full_name    = $_POST['full-name'] ?? '';
-$email        = $_POST['email'] ?? '';
-$whatsapp     = $_POST['teacher-whatsapp-number'] ?? '';
+// Extract and validate all required fields (die if missing or empty)
+$listing_type = trim($data['listing-type'] ?? '');
+$full_name    = trim($data['full-name'] ?? '');
+$email        = trim($data['email'] ?? '');
+$whatsapp     = trim($data['teacher-whatsapp-number'] ?? '');
 
-$stmt = $conn->prepare("INSERT INTO teacher_applications 
-    (full_name, email, listing_type, whatsapp_number) 
+if ($listing_type === '' || $full_name === '' || $email === '' || $whatsapp === '') {
+    http_response_code(400);
+    die("All fields (listing-type, full-name, email, teacher-whatsapp-number) are required.");
+}
+
+// ---- SAVE TO DATABASE ---- //
+$stmt = $conn->prepare("INSERT INTO teacher_applications
+    (full_name, email, listing_type, whatsapp_number)
     VALUES (?, ?, ?, ?)");
 
 if (!$stmt) {
-    die("❌ Prepare failed: " . $conn->error);
+    http_response_code(500);
+    die("Prepare failed: " . $conn->error);
 }
 
 $stmt->bind_param(
@@ -52,7 +69,8 @@ $stmt->bind_param(
 );
 
 if (!$stmt->execute()) {
-    die("❌ Execute failed: " . $stmt->error);
+    http_response_code(500);
+    die("Execute failed: " . $stmt->error);
 }
 
 $stmt->close();
@@ -86,5 +104,9 @@ try {
     error_log("Email failed: {$mail->ErrorInfo}");
 }
 
-header("Location: $site_url/thank-you-paid");
+header('Content-Type: application/json');
+echo json_encode([
+    'success' => true,
+    'message' => 'Application submitted successfully.'
+]);
 exit();
