@@ -43,7 +43,7 @@ if (empty($result["success"])) {
 $listing_type = trim($data['listing-type'] ?? '');
 $full_name    = trim($data['full-name'] ?? '');
 $email        = trim($data['email'] ?? '');
-$whatsapp     = trim($data['teacher-whatsapp-number'] ?? '');
+$whatsapp     = trim($data['teachers-whatsapp'] ?? '');
 
 if ($listing_type === '' || $full_name === '' || $email === '' || $whatsapp === '') {
     http_response_code(400);
